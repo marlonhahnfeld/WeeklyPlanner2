@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeeklyPlanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Faustina&display=swap" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="output.css" />
+</head>
+
+<!-- TODO: Dropdown Menü Style verfeinern -->
+<!-- TODO: Sidebar Menü noch ohne Logik - muss implementiert werden -->
+
+<body class="bg-BeigeCustom">
+    <div id="Upper-Body" class="flex justify-between flex-wrap m-5">
+        <button><i class='bx bx-menu text-4xl ml-5'></i></button>
+        <h1 class="font-Faustina text-5xl">WeeklyPlanner</h1>
+
+        <div id="User-Field" class="relative mr-5">
+            <button id="Dropdown-Button" onclick="showUserMenu()" class="flex items-center focus:outline-none">
+                <i class='bx bxs-user-circle text-5xl' style='color:#4d4d4d'></i>
+                <i class='bx bxs-down-arrow text-base place-content-center' style='color:#4d4d4d'></i>
+            </button>
+            <div id="User-Dropdown-Menu" class="flex-grow absolute hidden mt-2 right-0.5">
+                <nav class="bg-white border border-gray-300 shadow-md rounded-lg w-48">
+                    <a href="#" class="block px-4 py-2 hover:bg-RedCustom">Placeholder 1</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-RedCustom">Placeholder 2</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-RedCustom">Placeholder 3</a>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/logik-landing-page-nach-login.js"></script>
+</body>
+
+</html>

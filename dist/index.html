@@ -1,24 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Faustina&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="output.css" />
-  </head>
-  <body class="bg-GreyCustom">
-    <div class="text-4xl text-white bg-red-600 font-bold">hello world</div>
+<html lang="de">
 
-    <button
-      class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-full font-Faustina text-white w-44 h-14 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom p-2 mx-20 my-20"
-    >
-      Placeholder
-    </button>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeeklyPlanner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Faustina&display=swap" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="output.css" />
+</head>
+
+<!-- TODO: Login-Icon -> Login-Page -->
+<!-- TODO: Bottom-Body fertig stellen - Pseudo Impressum -->
+<!-- TODO: Styling der Buttons, Überschriften etc. (Größen, Font usw.) -->
+
+<body class="bg-BeigeCustom">
+  <div id="Top-Body" class="flex">
+    <div id="Logo-Container" class="ml-5 mt-5">
+      <a href="#"><i class='text-7xl bx bxs-calendar-check'></i></a>
+    </div>
+    <div id="Nav-Container" class="self-center ml-14 mt-5">
+      <nav>
+        <ol class="text-blue-600 underline flex flex-wrap gap-20">
+          <li><a href="#">Platzhalter-1</a></li>
+          <li><a href="#">Platzhalter-2</a></li>
+          <li><a href="#">Platzhalter-3</a></li>
+          <li><a href="#">Platzhalter-4</a></li>
+          <li><a href="#">Platzhalter-5</a></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+  <div id="Center-Body" class="flex w-full justify-between mt-5">
+    <div id="Left-Center-Body" class="max-w-150">
+      <img src="Test-Pic.jpg" alt="Natur" class="h-screen">
+    </div>
+    <div id="Center-Center-Body" class="max-w-60 m-10">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, alias tenetur quae vel nemo ea nam sequi
+        error placeat minus exercitationem labore impedit quam quasi ipsum dolorum aliquid ex suscipit!
+        Accusamus molestiae vel incidunt, totam, perspiciatis odit numquam alias repellat cumque illo error debitis
+        sapiente rem ad aliquam explicabo labore? Officiis, aut vel quia distinctio nostrum et fuga exercitationem eum.
+        Officia alias inventore repellendus, natus itaque deserunt. Ratione distinctio molestiae enim quidem numquam
+        nesciunt odio, fugiat aspernatur maxime consectetur est illo? Quas natus, amet ut nesciunt maxime voluptatem
+        veniam illo.
+        Praesentium accusamus incidunt omnis unde architecto quisquam cumque, velit commodi. Nostrum, voluptatibus
+        reiciendis veritatis dolorem maxime, ipsum totam possimus numquam, eveniet sed aut molestias! Itaque sequi
+        officia
+        fugit commodi id!
+        Nihil sit modi ut labore tenetur reprehenderit veniam porro, aliquid rerum nostrum eos voluptates natus non qui,
+        debitis beatae sequi doloribus officiis ipsa tempore quia laboriosam voluptatum minima. Placeat, maiores.
+      </p>
+    </div>
+    <div id="Right-Center-Body" class="min-w-5 max-w-150">
+      <img src="Test-Pic.jpg" alt="Natur" class="h-screen">
+    </div>
+  </div>
+  <div id="Lower-Body">Lower</div>
+</body>
+
 </html>
