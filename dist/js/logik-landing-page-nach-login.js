@@ -9,10 +9,6 @@ const dropdownMenu = document.getElementById("User-Dropdown-Menu");
  */
 function showUserMenu() {
   let isHidden = dropdownMenu.classList.contains("hidden");
-  // Wenn das Menü bereits sichtbar ist, verstecken
-  if (!isHidden) {
-    dropdownMenu.classList.add("hidden");
-  }
   // Wenn das Menü versteckt ist, anzeigen und den Event Listener hinzufügen
   dropdownMenu.classList.remove("hidden");
   // Event Listener für Klicks auf das Dokument, um das Menü zu schließen
@@ -30,6 +26,10 @@ function showUserMenu() {
     }
   };
   document.addEventListener("click", closeUserMenu);
+  // Wenn das Menü bereits sichtbar ist, verstecken
+  if (!isHidden) {
+    dropdownMenu.classList.add("hidden");
+  }
 }
 
 /**
