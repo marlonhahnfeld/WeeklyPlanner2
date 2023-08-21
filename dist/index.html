@@ -7,61 +7,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Faustina&display=swap"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="bg-GreyCustom">
+  <body class="bg-slate-800">
     <!--BUTTONS AT TOP START-->
     <div class="flex items-center gap-16">
-      <img src="/res/LOGO.png" alt="Example Image" class="w-32 h-22">
+      <img src="/res/LOGO_TRANS.png" alt="Example Image" class="w-32 h-22" />
       <button
-        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-44 h-16 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom"
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg border-[1px] border-slate-400 font-Faustina text-white w-44 h-16 bg-slate-600 hover:shadow-lg hover:shadow-slate-400"
       >
         Placeholder1
       </button>
       <button
-        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-44 h-16 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom"
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg border-[1px] border-slate-400 font-Faustina text-white w-44 h-16 bg-slate-600 hover:shadow-lg hover:shadow-slate-400"
       >
         Placeholder2
       </button>
       <button
-        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-44 h-16 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom"
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg border-[1px] border-slate-400 font-Faustina text-white w-44 h-16 bg-slate-600 hover:shadow-lg hover:shadow-slate-400"
       >
         Placeholder3
       </button>
       <button
-        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-44 h-16 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom"
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg border-[1px] border-slate-400 font-Faustina text-white w-44 h-16 bg-slate-600 hover:shadow-lg hover:shadow-slate-400"
       >
         Placeholder4
       </button>
-      <div class="flex justify-en ml-[400px]">
-        <button
-          class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white text-2xl w-52 h-20 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom ml-16 mr-8"
-        >
-          Login
+      <div class="flex justify-end ml-[400px]">
+        <button class="flex items-center justify-center transition-transform text-2xl duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-52 h-20 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom ml-16 mr-8">
+          <span class="mr-2">Login</span>
+          <i class="text-3xl bx bxs-arrow-to-right"></i>
         </button>
       </div>
+      
     </div>
-
     <!--BUTTONS AT TOP END-->
+
     <!--SLIDESHOW START-->
-    <!-- first textbox -->
-    <div class="slideshow-container">
-      <div class="slide">
-        <p style="font-size: 18px">Satz2</p>
-      </div>
-      <!-- second textbox -->
-      <div class="slide">
-        <p style="font-size: 18px">Satz1</p>
-      </div>
-      <a class="prev" onclick="moveSlide(-1)">❮</a>
-      <a class="next" onclick="moveSlide(1)">❯</a>
+<div class="slideshow-container relative border-2 border-gray-300 max-w-md mx-auto">
+  <!-- first textbox -->
+  <div class="slide">
+    <div class="textbox">
+      <p style="font-size: 18px">Satz2</p>
     </div>
-    <!--TODO: SLIDESHOW unten Punkte anzeigen wie viele Seiten es gibt auf den + Animation-->
-    <div id="lower-body"></div>
-    <script src="/src/js.js"></script>
-    <!--SLIDESHOW END-->
+  </div>
+  <!-- second textbox -->
+  <div class="slide">
+    <div class="textbox">
+      <p style="font-size: 18px">Satz1</p>
+    </div>
+  </div>
+  <a class="prev absolute left-0 top-1/2 transform -translate-y-1/2" onclick="moveSlide(-1)">❮</a>
+  <a class="next absolute right-0 top-1/2 transform -translate-y-1/2" onclick="moveSlide(1)">❯</a>
+</div>
+<!--TODO: SLIDESHOW unten Punkte anzeigen wie viele Seiten es gibt auf den + Animation-->
+<div id="lower-body"></div>
+<script src="/src/js.js"></script>
+<!--SLIDESHOW END-->
+
   </body>
 </html>
