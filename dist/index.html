@@ -13,12 +13,55 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body class="bg-GreyCustom">
-    <div class="text-4xl text-white bg-red-600 font-bold">hello world</div>
+    <!--BUTTONS AT TOP START-->
+    <div class="flex items-center gap-16">
+      <img src="/res/LOGO.png" alt="Example Image" class="w-32 h-22">
+      <button
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-44 h-16 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom"
+      >
+        Placeholder1
+      </button>
+      <button
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-44 h-16 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom"
+      >
+        Placeholder2
+      </button>
+      <button
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-44 h-16 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom"
+      >
+        Placeholder3
+      </button>
+      <button
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-44 h-16 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom"
+      >
+        Placeholder4
+      </button>
+      <div class="flex justify-en ml-[400px]">
+        <button
+          class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white text-2xl w-52 h-20 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom ml-16 mr-8"
+        >
+          Login
+        </button>
+      </div>
+    </div>
 
-    <button
-      class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-full font-Faustina text-white w-44 h-14 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom p-2 mx-20 my-20"
-    >
-      Placeholder
-    </button>
+    <!--BUTTONS AT TOP END-->
+    <!--SLIDESHOW START-->
+    <!-- first textbox -->
+    <div class="slideshow-container">
+      <div class="slide">
+        <p style="font-size: 18px">Satz2</p>
+      </div>
+      <!-- second textbox -->
+      <div class="slide">
+        <p style="font-size: 18px">Satz1</p>
+      </div>
+      <a class="prev" onclick="moveSlide(-1)">❮</a>
+      <a class="next" onclick="moveSlide(1)">❯</a>
+    </div>
+    <!--TODO: SLIDESHOW unten Punkte anzeigen wie viele Seiten es gibt auf den + Animation-->
+    <div id="lower-body"></div>
+    <script src="/src/js.js"></script>
+    <!--SLIDESHOW END-->
   </body>
 </html>

@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.slide {
+    display: none;
+    text-align: center;
+    width: 100%;
+    display: flex;
+  }
+  
+  .slide img {
+    width: 100%;
+    max-height: 400px;
+    margin: 0 10px;
+  }
+  
+  .slide .textbox {
+    font-size: 18px;
+    width: 100%;
+    margin: 0 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .slide .textbox {
+      font-size: 20px;
+    }
+  }
+  
+  /* Adjust font size for even larger screens */
+  @media (min-width: 1200px) {
+    .slide .textbox {
+      font-size: 24px;
+    }
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }

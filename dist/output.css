@@ -534,35 +534,194 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
+}
+
+.ml-40 {
+  margin-left: 10rem;
+}
+
+.ml-80 {
+  margin-left: 20rem;
+}
+
+.ml-px {
+  margin-left: 1px;
+}
+
+.ml-\[5px\] {
+  margin-left: 5px;
+}
+
+.ml-\[30px\] {
+  margin-left: 30px;
+}
+
+.ml-\[50px\] {
+  margin-left: 50px;
+}
+
+.ml-\[60px\] {
+  margin-left: 60px;
+}
+
+.ml-\[100px\] {
+  margin-left: 100px;
+}
+
+.ml-\[120px\] {
+  margin-left: 120px;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.ml-\[160px\] {
+  margin-left: 160px;
+}
+
+.ml-\[200px\] {
+  margin-left: 200px;
+}
+
+.ml-\[400px\] {
+  margin-left: 400px;
+}
+
+.ml-\[420px\] {
+  margin-left: 420px;
+}
+
+.ml-\[410px\] {
+  margin-left: 410px;
+}
+
+.ml-\[405px\] {
+  margin-left: 405px;
+}
+
+.ml-16 {
+  margin-left: 4rem;
+}
+
+.ml-\[425px\] {
+  margin-left: 425px;
+}
+
+.flex {
+  display: flex;
 }
 
 .h-14 {
   height: 3.5rem;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-28 {
+  height: 7rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
 .w-44 {
   width: 11rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-36 {
+  width: 9rem;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.w-52 {
+  width: 13rem;
 }
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-zoom-in {
+  cursor: zoom-in;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
-.bg-GreyCustom {
-  --tw-bg-opacity: 1;
-  background-color: rgb(77 77 77 / var(--tw-bg-opacity));
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .bg-RedCustom {
@@ -570,31 +729,46 @@ video {
   background-color: rgb(180 96 96 / var(--tw-bg-opacity));
 }
 
-.bg-red-600 {
+.bg-red-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
-.bg-BeigeCustom {
+.bg-GreyCustom {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 244 224 / var(--tw-bg-opacity));
+  background-color: rgb(77 77 77 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
 .p-2 {
   padding: 0.5rem;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .font-Faustina {
   font-family: Faustina;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
-.font-bold {
-  font-weight: 700;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-white {
@@ -625,6 +799,73 @@ video {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+  display: none;
+  text-align: center;
+  width: 100%;
+  display: flex;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 400px;
+  margin: 0 10px;
+}
+
+.slide .textbox {
+  font-size: 18px;
+  width: 100%;
+  margin: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .slide .textbox {
+    font-size: 20px;
+  }
+}
+
+/* Adjust font size for even larger screens */
+
+@media (min-width: 1200px) {
+  .slide .textbox {
+    font-size: 24px;
+  }
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .hover\:bg-OrangeCustom:hover {
