@@ -12,13 +12,17 @@
     <link rel="stylesheet" href="output.css" />
 </head>
 
-<!-- TODO: Dropdown-Menü Style verfeinern -->
-<!-- TODO: Side-Bar-Menü mit Placeholder befüllen & stylen -->
-<!-- TODO: Center-Body in Containern/Sektionen aufteilen -->
+<!-- TODO: Wetter-Container mit Greeting-Container verknüpfen -->
+<!-- * Kann mit Flex gut gearbeitet werden und mit "Space-between" an die Ecken angepasst werden -->
+<!-- TODO: Quick-Menu-Buttons designen mit Icons & Font-Family überarbeiten -->
+<!-- ? Evtl. nochmal über die Positionierung des Textes Gedanken machen -->
+<!-- TODO: Wenn Side-Bar-Menu geöffnet wird, soll Fokus auf ihn gelegt werden -->
+<!-- ? Soll alles andere ausgeblendet werden, sodass Fokus nur auf Menü ist? -->
+<!-- TODO: Erstes Grunddesign für Termin und mit Placeholder befüllen, um Größen o.Ä. anpaassen zu können -->
 
 <body class="bg-slate-800">
     <div id="Upper-Body" class="flex flex-wrap items-start justify-between m-5">
-        <div id="Menu-Field"
+        <div id="Menu-Container"
             class="absolute top-0 left-0 flex flex-col justify-between h-screen transition-transform duration-300 transform -translate-x-full w-44 bg-slate-600">
             <!-- Referenz - Faustina, geht aber noch feiner -->
             <nav class="flex flex-col gap-8 ml-2 text-lg text-center text-white font-Faustina mt-28">
@@ -39,9 +43,9 @@
         <button id="Menu-Button" onclick="showSideMenu()" class="relative mt-2 text-4xl">
             <i class='bx bx-menu' style="color: white;"></i>
         </button>
-        <h1 class="text-5xl font-Faustina text-RedCustom">WeeklyPlanner</h1>
+        <h2 class="text-5xl font-Faustina text-RedCustom">WeeklyPlanner</h2>
         <div id="User-Field" class="relative">
-            <button id="Dropdown-Button" onclick="showUserMenu()" class="flex mt-2 text-5xl rounded-full">
+            <button id="User-Dropdown-Button" onclick="showUserMenu()" class="flex mt-2 text-5xl rounded-full">
                 <i class='bx bxs-user-circle' style='color:rgb(202, 202, 202)'></i>
             </button>
             <div id="User-Dropdown-Menu" class="flex-grow absolute hidden right-0.5">
@@ -49,7 +53,102 @@
                     <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Placeholder 1</a>
                     <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Placeholder 2</a>
                     <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Placeholder 3</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Placeholder 4</a>
                 </nav>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="Center-Body" class="mt-12">
+        <div id="Greeting-Container">
+            <h1 class="text-6xl text-white ml-14">
+                Hallo Marlon!
+            </h1>
+        </div>
+        <div id="Main-Content-Container" class="flex gap-10 text-white mt-14 mx-14">
+            <div id="Calendar-Appointment-Container" class="flex flex-col">
+                <div id="Appointment-Container" class="flex gap-10">
+                    <div id="Upcoming-Appointment-Container" class="max-w-3xl text-center border w-fit">
+                        <p>
+                            <span class="font-bold">Nächst-Anstehender Termin</span><br>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At iste soluta et autem
+                            perspiciatis
+                            natus quos officiis tenetur libero mollitia molestias commodi doloribus sit dignissimos sed
+                            animi consectetur cupiditate, delectus voluptatem recusandae cum. Ab odio tenetur tempora
+                            recusandae laboriosam incidunt aspernatur suscipit distinctio accusamus? Odit asperiores
+                        </p>
+                    </div>
+                    <div id="Most-Important-Appointment-Container" class="max-w-3xl text-center border w-fit">
+                        <p>
+                            <span class="font-bold">Wichtigster Termin</span><br>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At iste soluta et autem
+                            perspiciatis
+                            natus quos officiis tenetur libero mollitia molestias commodi doloribus sit dignissimos sed
+                            animi consectetur cupiditate, delectus voluptatem recusandae cum. Ab odio tenetur tempora
+                            recusandae laboriosam incidunt aspernatur suscipit distinctio accusamus? Odit asperiores
+                        </p>
+                    </div>
+                </div>
+                <div id="Week-Calendar-Container" class="max-w-[98.5rem] mt-5 border text-center">
+                    <span class="font-bold">Wochen-Übersicht</span><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit deserunt nulla dolorum magnam
+                        doloremque minus impedit quas est, similique mollitia temporibus inventore, explicabo saepe quia
+                        repudiandae qui! Nisi ea voluptatibus autem dicta aperiam, quod fuga, nostrum cupiditate iure
+                        commodi harum suscipit tempore rem quia magni odit, ullam delectus ducimus. Expedita deserunt
+                        pariatur quae rerum tenetur maxime sed officia et maiores quisquam sunt possimus voluptates
+                        inventore facilis commodi quis fuga, dolore iure dolor numquam omnis? Ad accusantium possimus
+                        ipsam
+                        magni, mollitia dignissimos? Nostrum minus animi doloribus voluptate placeat minima,
+                        necessitatibus
+                        incidunt maiores rerum modi facere! Perferendis porro ad sequi illum voluptatem id laudantium
+                        quisquam eos nisi tempore voluptas, fuga qui ex totam incidunt? Quam, iusto, reiciendis itaque
+                        perferendis odit tempore sequi et neque corrupti excepturi rem magnam maiores iste rerum
+                        expedita
+                        hic est aut minus eum magni provident voluptatum qui! Animi accusantium architecto mollitia
+                        totam
+                        excepturi accusamus sed pariatur vel. Vero fuga ratione animi, fugit reiciendis velit dicta
+                        nostrum
+                        sequi minima voluptatum pariatur eveniet numquam qui quas blanditiis et. Dolor porro
+                        perspiciatis
+                        suscipit quas enim quidem et ab molestias est deleniti quia ipsam veniam iste non reprehenderit
+                        dolorem autem nesciunt beatae, iure explicabo aliquam asperiores consectetur voluptatibus sequi.
+                        Ratione placeat dolor, error ducimus ullam architecto doloribus magni. Omnis architecto quis
+                        dolores
+                        perspiciatis animi voluptas doloribus facilis, eius est possimus quasi fuga laudantium
+                        blanditiis
+                        explicabo sint saepe cum, dolore temporibus. Veritatis, nulla. Hic quos praesentium alias sint
+                        cupiditate ab rem ullam exercitationem? Ea consequatur ex tempora possimus quia consectetur
+                        laboriosam, ullam sint, neque voluptates impedit fuga dolorem natus maiores reiciendis eos
+                        magni.
+                        Corporis obcaecati error beatae ad neque eum? Animi, libero! Obcaecati officia voluptatibus
+                        aspernatur neque odio, harum vel quisquam quae quas officiis necessitatibus nobis sed
+                        dignissimos.
+                        Commodi, unde, sit facere ipsam molestias excepturi provident sunt rerum exercitationem
+                        assumenda
+                        odit ipsum eius aliquam! Laborum quis iste voluptatum distinctio nemo magnam quia ducimus et,
+                        assumenda natus consectetur debitis consequatur similique quibusdam accusamus ut doloremque fuga
+                        non
+                        eum. Corrupti nisi ratione, odio laborum deserunt at, est laboriosam tempora vel consectetur
+                        libero
+                        incidunt deleniti officiis nulla beatae numquam quia dolor necessitatibus ut dolorem eligendi!
+                        Consequatur vitae sequi autem provident fugiat nemo veritatis, a aliquam. Dolorem sequi
+                        voluptatibus
+                        maiores facilis consectetur impedit magnam esse repellendus! Quo error ullam soluta id
+                        voluptates
+                        consequatur sed placeat quae animi quaerat aliquam architecto rem obcaecati et nemo, quas
+                        dolores
+                        distinctio a nulla. Facilis ipsum temporibus cum ipsam atque ducimus eum nostrum, at rem quo
+                        impedit
+                        similique facere, soluta fuga iste? Quod recusandae quo accusantium cupiditate mollitia delectus
+                        dignissimos voluptates. Quae, assumenda dolorum, quos expedita illum aspernatur modi unde
+                        quibusdam
+                        quo iusto nisi ea et eveniet voluptates vero hic quis? Nobis officia est saepe vitae beatae
+                        ducimus
+                        repellendus mollitia provident voluptatem.</p>
+                </div>
+            </div>
+            <div id="Quick-Menu-Buttons-Container" class="w-40 text-center border">
+                Quick-Menu-Buttons-Container
             </div>
         </div>
     </div>

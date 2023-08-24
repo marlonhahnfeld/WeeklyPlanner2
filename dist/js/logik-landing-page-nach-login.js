@@ -1,5 +1,4 @@
-const sideBarMenu = document.getElementById("Menu-Field");
-const dropdownButton = document.getElementById("Dropdown-Button");
+const dropdownButton = document.getElementById("User-Dropdown-Button");
 const dropdownMenu = document.getElementById("User-Dropdown-Menu");
 
 /**
@@ -37,7 +36,7 @@ function showUserMenu() {
  * ! Besitzt im CSS die genaue Animation - Arbeitet mit Transition/Transform
  */
 function showSideMenu() {
-  let menuField = document.getElementById("Menu-Field");
+  let menuField = document.getElementById("Menu-Container");
   let isHidden = menuField.classList.contains("-translate-x-full");
   if (!isHidden) {
     menuField.classList.add("-translate-x-full");
