@@ -14,28 +14,42 @@
 
 <!-- TODO: Wetter-Container mit Greeting-Container verknüpfen -->
 <!-- * Kann mit Flex gut gearbeitet werden und mit "Space-between" an die Ecken angepasst werden -->
-<!-- TODO: Quick-Menu-Buttons designen mit Icons & Font-Family überarbeiten -->
-<!-- ? Evtl. nochmal über die Positionierung des Textes Gedanken machen -->
 <!-- TODO: Wenn Side-Bar-Menu geöffnet wird, soll Fokus auf ihn gelegt werden -->
 <!-- ? Soll alles andere ausgeblendet werden, sodass Fokus nur auf Menü ist? -->
-<!-- TODO: Erstes Grunddesign für Termin und mit Placeholder befüllen, um Größen o.Ä. anpaassen zu können -->
 
 <body class="bg-slate-800">
     <div id="Upper-Body" class="flex flex-wrap items-start justify-between m-5">
         <div id="Menu-Container"
-            class="absolute top-0 left-0 flex flex-col justify-between h-screen transition-transform duration-300 transform -translate-x-full w-44 bg-slate-600">
+            class="absolute top-0 left-0 flex flex-col justify-between w-48 h-screen transition-transform duration-300 transform -translate-x-full bg-slate-600">
             <!-- Referenz - Faustina, geht aber noch feiner -->
-            <nav class="flex flex-col gap-8 ml-2 text-lg text-center text-white font-Faustina mt-28">
-                <a href="#" class="mx-5 rounded-lg hover:bg-RedCustom"><i class='bx bxs-home'></i>
-                    Home</a>
+            <nav class="flex flex-col gap-8 ml-2 text-lg text-white font-Faustina mt-28">
+                <a href="#" class="flex items-center mx-5 rounded-lg hover:bg-RedCustom">
+                    <i class='bx bxs-home'></i>
+                    <span class="ml-2">
+                        Home
+                    </span>
+                </a>
                 <hr class="mx-5 -mt-5">
-                <a href="#" class="mx-5 rounded-lg hover:bg-RedCustom">Placeholder 2</a>
+                <a href="#" class="flex items-center mx-5 rounded-lg hover:bg-RedCustom">
+                    <i class='bx bxs-calendar'></i>
+                    <span class="ml-2">
+                        Kalender
+                    </span>
+                </a>
                 <hr class="mx-5 -mt-5">
-                <a href="#" class="mx-5 rounded-lg hover:bg-RedCustom">Placeholder 3</a>
+                <a href="#" class="flex items-center mx-5 rounded-lg hover:bg-RedCustom">
+                    <i class='bx bxs-group'></i>
+                    <span class="ml-2">
+                        Gruppen
+                    </span>
+                </a>
                 <hr class="mx-5 -mt-5">
-                <a href="#" class="mx-5 rounded-lg hover:bg-RedCustom">Placeholder 4</a>
-                <hr class="mx-5 -mt-5">
-                <a href="#" class="mx-5 rounded-lg hover:bg-RedCustom">Placeholder 5</a>
+                <a href="#" class="flex items-center mx-5 rounded-lg hover:bg-RedCustom">
+                    <i class='bx bxs-cog'></i>
+                    <span class="ml-2">
+                        Einstellungen
+                    </span>
+                </a>
                 <hr class="mx-5 -mt-5">
             </nav>
             <p class="mb-5 text-sm italic text-center text-white">&copy;WeeklyPlanner2023</p>
@@ -50,10 +64,10 @@
             </button>
             <div id="User-Dropdown-Menu" class="flex-grow absolute hidden right-0.5">
                 <nav class="w-48 text-white border border-gray-300 rounded-lg shadow-md bg-slate-600">
-                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Placeholder 1</a>
-                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Placeholder 2</a>
-                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Placeholder 3</a>
-                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Placeholder 4</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Profil</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Einstellungen</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Hilfe</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Abmelden</a>
                 </nav>
             </div>
         </div>
@@ -67,26 +81,18 @@
         </div>
         <div id="Main-Content-Container" class="flex gap-10 text-white mt-14 mx-14">
             <div id="Calendar-Appointment-Container" class="flex flex-col">
-                <div id="Appointment-Container" class="flex gap-10">
-                    <div id="Upcoming-Appointment-Container" class="max-w-3xl text-center border w-fit">
-                        <p>
-                            <span class="font-bold">Nächst-Anstehender Termin</span><br>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At iste soluta et autem
-                            perspiciatis
-                            natus quos officiis tenetur libero mollitia molestias commodi doloribus sit dignissimos sed
-                            animi consectetur cupiditate, delectus voluptatem recusandae cum. Ab odio tenetur tempora
-                            recusandae laboriosam incidunt aspernatur suscipit distinctio accusamus? Odit asperiores
-                        </p>
+                <div id="Appointment-Container" class="flex justify-between">
+                    <div id="Upcoming-Appointment-Container" class="text-center border w-[40rem]">
+                        <span class="font-bold">Wichtigster Termin</span><br>
+                        <!-- TODO: Pseudo Termin-Button erstellen -->
+                        <!-- ! Text Positionierung innerhalb Buttons funktionieren nicht -->
+                        <button class="w-full px-2 mt-2 h-28 bg-slate-400"></button>
                     </div>
-                    <div id="Most-Important-Appointment-Container" class="max-w-3xl text-center border w-fit">
-                        <p>
-                            <span class="font-bold">Wichtigster Termin</span><br>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At iste soluta et autem
-                            perspiciatis
-                            natus quos officiis tenetur libero mollitia molestias commodi doloribus sit dignissimos sed
-                            animi consectetur cupiditate, delectus voluptatem recusandae cum. Ab odio tenetur tempora
-                            recusandae laboriosam incidunt aspernatur suscipit distinctio accusamus? Odit asperiores
-                        </p>
+                    <div id="Most-Important-Appointment-Container" class="text-center border w-[40rem]">
+                        <span class="font-bold">Wichtigster Termin</span><br>
+                        <button class="w-full mt-2 align-bottom bg-slate-400">
+                            Test
+                        </button>
                     </div>
                 </div>
                 <div id="Week-Calendar-Container" class="max-w-[98.5rem] mt-5 border text-center">
