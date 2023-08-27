@@ -12,7 +12,6 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="output.css" />
-    <script src="register.js"></script>
   </head>
   <body>
     <div class="flex justify-center items-center h-screen bg-slate-800">
@@ -27,56 +26,56 @@
         >
           Registrieren
         </h1>
-        <label for="firstname" class="block text-base mt-30 mb-1 text-white"
-          >Vorname</label
-        >
-        <input
-          type="text"
-          class="bg-slate-800 mb-5 rounded-md px-2 text-white"
-          placeholder="Vorname"
-          id="input-firstname"
-        />
-        <label for="lastname" class="block text-base mt-30 mb-1 text-white"
-          >Nachname</label
-        >
-        <input
-          type="text"
-          class="bg-slate-800 rounded-md px-2 text-white"
-          placeholder="Nachname"
-        />
-        <label for="dateofBirth" class="block text-base mt-5 mb-1 text-white"
-          >Geburtsdatum</label
-        >
-        <div class="flex mr-2 justify-start">
+        <form id="form" action="">
+          <label for="firstname" class="block text-base mt-30 mb-1 text-white"
+            >Vorname</label
+          >
           <input
             type="text"
-            class="bg-red-50 w-14 mr-5 rounded-sm px-2"
-            placeholder="DD"
+            name="firstname"
+            class="bg-slate-800 mb-5 rounded-md px-2 text-white"
+            placeholder="Vorname"
+            id="input-firstname"
           />
+          <label for="lastname" class="block text-base mt-30 mb-1 text-white"
+            >Nachname</label
+          >
           <input
             type="text"
-            class="bg-red-50 w-14 mr-5 rounded-sm px-2"
-            placeholder="MM"
+            name="lastname"
+            class="bg-slate-800 rounded-md px-2 text-white"
+            placeholder="Nachname"
+            id="input-secondname"
           />
-          <input
-            type="text"
-            class="bg-red-50 w-14 mr-5 rounded-sm px-2"
-            placeholder="YYYY"
-          />
-        </div>
-        <div class="flex justify-end">
-          <!--TODO-->
+          <label for="dateofBirth" class="block text-base mt-5 mb-1 text-white"
+            >Geburtsdatum</label
+          >
+          <div class="flex mr-2 justify-start">
+            <input
+              type="date"
+              id="dateofBirth"
+              name="dateofBirth"
+              min="1900-01-01"
+              max="2099-12-31"
+              class=""
+            />
+          </div>
 
-          <a href="register-page-second.html">
-            <button
-              class="bg-RedCustom rounded-md text-xl ml-10 text-white hover:bg-red-950 p-2"
-              id="btn1"
-            >
-              Weiter
-            </button>
-          </a>
-        </div>
+          <div class="flex justify-end">
+            <a href="register-page-second.html">
+              <button
+                type="submit"
+                class="bg-RedCustom rounded-md text-xl ml-10 text-white hover:bg-red-950 p-2"
+                id="btn-to-register2"
+              >
+                Weiter
+              </button>
+            </a>
+          </div>
+          <!--</form>-->
+        </form>
       </div>
     </div>
+    <script src="register.js"></script>
   </body>
 </html>

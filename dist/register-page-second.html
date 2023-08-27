@@ -22,6 +22,7 @@
       />
       <div class="w-96 p-6 bg-slate-700 rounded-md">
         <a href="register-page.html">
+          <!---Back button to register1-->
           <i class="fa-solid fa-arrow-left fa-spin text-white"></i>
         </a>
         <h1
@@ -29,36 +30,38 @@
         >
           Registrieren
         </h1>
-        <label for="email" class="block text-base mt-30 mb-1 text-white"
+
+        <label for="inputemail" class="block text-base mt-30 mb-1 text-white"
           >Email</label
         >
         <input
           type="email"
           class="bg-slate-800 mb-5 rounded-md text-white px-1"
           placeholder="Email"
+          id="inputemail"
         />
-        <label for="Password" class="block text-base mt-30 mb-1 text-white"
+        <label for="inputpassword" class="block text-base mt-30 mb-1 text-white"
           >Password</label
         >
         <input
           type="password"
           class="bg-slate-800 rounded-md text-white px-1"
           placeholder="Password"
+          id="inputpassword"
         />
-        <label
-          for="confirm_password"
-          class="block text-base mt-5 mb-1 text-white"
+        <label for="inputpassword2" class="block text-base mt-5 mb-1 text-white"
           >Password bestätigen</label
         >
         <input
           type="password"
           class="bg-slate-800 rounded-md text-white px-1"
           placeholder="Password bestätigen"
+          id="inputpassword2"
         />
-
         <div class="flex justify-end">
           <button
             class="bg-RedCustom rounded-md text-xl ml-10 text-white hover:bg-red-950 px-1"
+            id="btnregister"
           >
             Registrieren
           </button>
@@ -66,4 +69,5 @@
       </div>
     </div>
   </body>
+  <script src="firebase.js"></script>
 </html>
