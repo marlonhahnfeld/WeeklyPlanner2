@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.Appointment-Button {
+  width: 638px;
+  height: 7rem;
+  background: slategrey;
+}
+
+.Appointment-Button:hover {
+  background-color: rgb(148, 163, 184);
+}
+
+.Quick-Menu-Button {
+  background-color: slategray;
+  border-radius: 5%;
+  height: 125px;
+  width: 136px;
+}
+
+.Quick-Menu-Button:hover {
+  background-color: rgb(148, 163, 184);
+}

@@ -1,5 +1,7 @@
 const dropdownButton = document.getElementById("User-Dropdown-Button");
 const dropdownMenu = document.getElementById("User-Dropdown-Menu");
+const sideMenuButton = document.getElementById("Menu-Button");
+const sideMenuContainer = document.getElementById("Menu-Container");
 
 /**
  * * Funktion, um User-Menü anzeigen zu lassen
@@ -34,13 +36,23 @@ function showUserMenu() {
 /**
  * * Funktion, um Side-Bar-Menü einblenden zu lassen
  * ! Besitzt im CSS die genaue Animation - Arbeitet mit Transition/Transform
+ * Ergänzung, dass wenn außerhalb geklickt wird, dass sich Menü schließt
  */
 function showSideMenu() {
-  let menuField = document.getElementById("Menu-Container");
-  let isHidden = menuField.classList.contains("-translate-x-full");
+  let isHidden = sideMenuContainer.classList.contains("-translate-x-full");
+  sideMenuContainer.classList.remove("-translate-x-full");
+  const closeSideMenu = function (event) {
+    const targetElement = event.target;
+    if (
+      !sideMenuContainer.contains(targetElement) &&
+      !sideMenuButton.contains(targetElement)
+    ) {
+      sideMenuContainer.classList.add("-translate-x-full");
+      document.removeEventListener("click", closeSideMenu);
+    }
+  };
+  document.addEventListener("click", closeSideMenu);
   if (!isHidden) {
-    menuField.classList.add("-translate-x-full");
-  } else {
-    menuField.classList.remove("-translate-x-full");
+    sideMenuContainer.classList.add("-translate-x-full");
   }
 }
