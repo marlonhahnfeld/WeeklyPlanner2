@@ -14,68 +14,99 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body>
-    <div class="flex justify-center items-center h-screen bg-slate-800">
+    <div class="flex justify-center items-center h-screen bg-slate-800" id="body">
       <img
         src="../res/logo/OIG-removebg-preview.png"
         class="absolute top-[212px] w-36"
         id="logo-nobg"
       />
-      <div class="w-96 p-6 bg-slate-700 rounded-md">
+      <div class="w-96 p-6 bg-slate-700 rounded-md" id="innerbody">
         <h1
           class="text-3xl block text-center font-semibold font-Faustina text-white mt-10 mb-10"
         >
           Registrieren
         </h1>
-        <form id="form" action="">
-          <label for="firstname" class="block text-base mt-30 mb-1 text-white"
-            >Vorname</label
-          >
+       
+        <div id="register1" >
+          <label for="inputFirstName" class="block text-base mt-30 mb-1 text-white"
+          >Vorname</label
+        >
           <input
-            type="text"
-            name="firstname"
-            class="bg-slate-800 mb-5 rounded-md px-2 text-white"
-            placeholder="Vorname"
-            id="input-firstname"
-          />
-          <label for="lastname" class="block text-base mt-30 mb-1 text-white"
-            >Nachname</label
-          >
+          type="text"
+          class="bg-slate-800 mb-5 rounded-md text-white px-1"
+          placeholder="Vorname"
+          id="inputFirstName"
+        />
+        <label for="inputSecondName" class="block text-base mt-30 mb-1 text-white"
+          >Nachname</label
+        >
+        <input
+          type="text"
+          class="bg-slate-800 rounded-md text-white px-1 block mb-5"
+          placeholder="Nachname"
+          id="inputSecondName"
+        />
+        <label for="inputBirthday" class="block text-base mb-1 text-white">Geburtstag</label>
+        <input
+          type="date"
+          class="bg-slate-800 rounded-md text-white px-1"
+          placeholder="Geburtstag"
+          id="inputBirthday"
+        />
+        <div class="flex justify-end ">
           <input
-            type="text"
-            name="lastname"
-            class="bg-slate-800 rounded-md px-2 text-white"
-            placeholder="Nachname"
-            id="input-secondname"
-          />
-          <label for="dateofBirth" class="block text-base mt-5 mb-1 text-white"
-            >Geburtsdatum</label
+            type="submit"
+            value="Weiter"
+            class="bg-RedCustom rounded-md text-xl ml-10 text-white hover:bg-red-950 px-1"
+            id="btn2register2"
           >
-          <div class="flex mr-2 justify-start">
-            <input
-              type="date"
-              id="dateofBirth"
-              name="dateofBirth"
-              min="1900-01-01"
-              max="2099-12-31"
-              class=""
-            />
+          </input>
           </div>
-
+        </div>
+       
+          <!---Register part 2 slide-->
+          <div id="register2" class="hidden">
+            <label for="inputemail" class="block text-base mt-30 mb-1 text-white"
+            >Email</label
+          >
+          <input
+            type="email"
+            class="bg-slate-800 mb-5 rounded-md text-white px-1"
+            placeholder="Email"
+            id="inputemail"
+          />
+          <label for="inputpassword" class="block text-base mb-1 text-white"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="bg-slate-800 rounded-md text-white px-1"
+            placeholder="Password"
+            id="inputpassword"
+          />
+          <label for="inputpassword2" class="block text-base mt-5 mb-1 text-white"
+            >Password bestätigen</label
+          >
+          <input
+            type="password"
+            class="bg-slate-800 rounded-md text-white px-1"
+            placeholder="Password bestätigen"
+            id="inputpassword2"
+          />
           <div class="flex justify-end">
-            <a href="register-page-second.html">
-              <button
-                type="submit"
-                class="bg-RedCustom rounded-md text-xl ml-10 text-white hover:bg-red-950 p-2"
-                id="btn-to-register2"
-              >
-                Weiter
-              </button>
-            </a>
+            <input
+              type="submit"
+              value="Registrieren"
+              class="bg-RedCustom rounded-md text-xl ml-10 text-white hover:bg-red-950 px-1"
+              id="btnregister"
+            >
+            </input>
           </div>
-          <!--</form>-->
-        </form>
+         
+        </div>
       </div>
     </div>
+    <script src="firebase-auth.js" type="module"></script>
     <script src="register.js"></script>
   </body>
 </html>
