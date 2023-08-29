@@ -37,36 +37,67 @@
         Placeholder4
       </button>
       <div class="flex justify-end ml-[400px]">
-        <button class="flex items-center justify-center transition-transform text-2xl duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-52 h-20 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom ml-16 mr-8">
+        <button
+          class="flex items-center justify-center transition-transform text-2xl duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-52 h-20 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom ml-16 mr-8"
+        >
           <span class="mr-2">Login</span>
           <i class="text-3xl bx bxs-arrow-to-right"></i>
         </button>
       </div>
-      
     </div>
     <!--BUTTONS AT TOP END-->
 
-    <!--SLIDESHOW START-->
-<div class="slideshow-container relative border-2 border-gray-300 max-w-md mx-auto">
-  <!-- first textbox -->
-  <div class="slide">
-    <div class="textbox">
-      <p style="font-size: 18px">Satz2</p>
+    <!-- better SLideshow Start -->
+    <div class="slider">
+      <div class="slides">
+        <!-- radio buttons start -->
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+        <!-- radio buttons end -->
+        <!-- slide images start -->
+        <div class="slide first">
+          <img src="../res/1.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../res/2.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../res/3.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../res/4.png" alt="" />
+        </div>
+        <!-- slide images end -->
+        <!-- automatic navigation start -->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!-- automatic navigation end -->
+      </div>
+      <!-- manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!-- manual navigation end-->
     </div>
-  </div>
-  <!-- second textbox -->
-  <div class="slide">
-    <div class="textbox">
-      <p style="font-size: 18px">Satz1</p>
-    </div>
-  </div>
-  <a class="prev absolute left-0 top-1/2 transform -translate-y-1/2" onclick="moveSlide(-1)">❮</a>
-  <a class="next absolute right-0 top-1/2 transform -translate-y-1/2" onclick="moveSlide(1)">❯</a>
-</div>
-<!--TODO: SLIDESHOW unten Punkte anzeigen wie viele Seiten es gibt auf den + Animation-->
-<div id="lower-body"></div>
-<script src="/src/js.js"></script>
-<!--SLIDESHOW END-->
-
+    <!-- better SLideshow End -->
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+    </script>
   </body>
 </html>

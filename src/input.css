@@ -1,40 +1,120 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.slide {
-    display: none;
-    text-align: center;
-    width: 100%;
-    display: flex;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* Adjust font size for even larger screens */
-  @media (min-width: 1200px) {
-    .slide .textbox {
-      font-size: 24px;
-    }
-  }
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 25%;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/* css for manual slide navigation*/
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor:pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/* css for automatic navigation */
+
+.navigation-auto{
+  position: absolute;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
   
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-  }
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
   
-  .next {
-    right: 0;
-  }
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
   
-  .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+}
