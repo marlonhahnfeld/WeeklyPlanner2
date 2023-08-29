@@ -14,7 +14,7 @@
   </head>
   <body class="bg-slate-800">
     <!--BUTTONS AT TOP START-->
-    <div class="flex items-center gap-16">
+    <div class="flex items-center gap-8">
       <img src="/res/LOGO_TRANS.png" alt="Example Image" class="w-32 h-22" />
       <button
         class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg border-[1px] border-slate-400 font-Faustina text-white w-44 h-16 bg-slate-600 hover:shadow-lg hover:shadow-slate-400"
@@ -88,16 +88,16 @@
       </div>
       <!-- manual navigation end-->
     </div>
-    <!-- better SLideshow End -->
     <script type="text/javascript">
       var counter = 1;
       setInterval(function () {
         document.getElementById("radio" + counter).checked = true;
         counter++;
-        if(counter > 4){
+        if (counter > 4) {
           counter = 1;
         }
       }, 5000);
     </script>
+    <!-- better SLideshow End -->
   </body>
 </html>
