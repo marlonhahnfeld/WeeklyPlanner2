@@ -5,6 +5,8 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
+import {getFirestore } from 'https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore.js'
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -26,11 +28,21 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 
-function signUpUser() {
+
+const db = getFirestore(app);
+
+ function signUpUser() {
   const inputemail = document.getElementById("inputemail").value;
   const inputpw = document.getElementById("inputpassword").value;
   const inputpw2 = document.getElementById("inputpassword2").value;
   const btnregister = document.getElementById("btnregister");
+  const firstName = document.getElementById("inputFirstName").value;
+  const secondName = document.getElementById("inputSecondName").value;
+  const dateOfBirth = document.getElementById("inputBirthday").value;
+
+
+
+
   const passwordMatch = inputpw === inputpw2;
   if (passwordMatch) {
     console.log(inputemail + " " + inputpw);
@@ -38,6 +50,15 @@ function signUpUser() {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        console.log(db);
+
+         db.collection('userInfo').doc(user.uid).set({
+          // Zusätzliche Informationen
+          vorname: firstName,
+          nachname: secondName,
+          geburtstag: dateOfBirth
+        });
+        console.log("test 2");
         // ...
       })
       .catch((error) => {
