@@ -17,6 +17,7 @@
 </head>
 
 <!-- ? Soll alles andere ausgeblendet werden, sodass Fokus nur auf Menü ist? -->
+<!-- TODO: Kalender ersetzen durch eigenen -->
 
 <body class="bg-slate-800">
     <div id="Upper-Body" class="flex flex-wrap items-start justify-between m-5">
@@ -62,7 +63,7 @@
             <button id="User-Dropdown-Button" onclick="showUserMenu()" class="flex mt-2 text-5xl rounded-full">
                 <i class='bx bxs-user-circle' style='color:rgb(202, 202, 202)'></i>
             </button>
-            <div id="User-Dropdown-Menu" class="flex-grow absolute hidden right-0.5">
+            <div id="User-Dropdown-Menu" class="flex-grow z-10 absolute hidden right-0.5">
                 <nav class="w-48 text-white border border-gray-300 rounded-lg shadow-md bg-slate-600">
                     <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Profil</a>
                     <a href="#" class="block px-4 py-2 rounded-lg hover:bg-RedCustom">Einstellungen</a>
@@ -79,10 +80,15 @@
                 Hallo Marlon!
             </h1>
         </div>
-        <div id="Main-Content-Container" class="flex gap-10 mt-5 text-white mx-14">
-            <div id="Calendar-Appointment-Container" class="flex flex-col">
-                <div id="Appointment-Container" class="flex justify-between w-[1400px] border">
-                    <div id="Upcoming-Appointment-Container" class="text-center w-[35rem]">
+        <div id="Weather-Container" class="w-[200px] absolute top-[100px] right-[100px]">
+            <iframe width='300' height='255' name='FC1'
+                style='border:1px solid; border-bottom-left-radius:25px; border-color:transparent;'
+                src='https://api.wetteronline.de/wetterwidget?gid=10147&modeid=FC1&seourl=hamburg&locationname=Hamburg&lang=de'></iframe>
+        </div>
+        <div id="Main-Content-Container" class="flex mt-5 text-white mx-14">
+            <div id="Calendar-Appointment-Container">
+                <div id="Appointment-Container" class="flex justify-between w-[1100px] text-center">
+                    <div id="Upcoming-Appointment-Container" class="p-[13px] border">
                         <h5>Nächst Anstehender Termin</h5><br>
                         <button class="-mt-5 Appointment-Button">
                             <div class="flex flex-col justify-between w-full h-full">
@@ -94,7 +100,7 @@
                             </div>
                         </button>
                     </div>
-                    <div id="Most-Important-Appointment-Container" class="text-center w-[35rem]">
+                    <div id="Most-Important-Appointment-Container" class="p-5 border">
                         <h5>Wichtigster Termin</h5><br>
                         <button class="-mt-5 Appointment-Button">
                             <div class="flex flex-col justify-between w-full h-full">
@@ -107,25 +113,18 @@
                         </button>
                     </div>
                 </div>
-                <div id="Week-Calendar-Container" class="w-[1400px] mt-2">
-                    <div id="calendar" class="h-[560px]"></div>
-                </div>
-            </div>
-            <div id="Quick-Menu-Container" class="flex flex-col gap-10 text-4xl text-center ">
-                <div id="Weather-Container" class="w-[140px]">
-                    <div id="ww_0ae87bc60c8e0" v='1.3' loc='id'
-                        a='{"t":"responsive","lang":"de","sl_lpl":1,"ids":["wl281"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_wfc":3,"sl_tof":"3"}'>
-                        Quelle der Wetterdaten:
-                        <a href="https://wetterlang.de/hamburg_wetter_14_tage/" id="ww_0ae87bc60c8e0_u"
-                            target="_blank">wetter 14 tage Hamburg
-                        </a>
+                <div id="Calendar-Quick-Menu-Container" class="flex gap-5">
+                    <div id="Week-Calendar-Container" class="w-[1100px] mt-2">
+                        <div id="calendar" class="h-[500px]"></div>
                     </div>
-                    <script async src="https://app2.weatherwidget.org/js/?id=ww_0ae87bc60c8e0"></script>
-                </div>
-                <div id="Quick-Menu-Button-Container" class="flex flex-col gap-10 mb-5">
-                    <button class="Quick-Menu-Button"><i class='bx bx-add-to-queue'></i></button>
-                    <button class="Quick-Menu-Button"><i class='bx bxs-group'></i></button>
-                    <button class="Quick-Menu-Button"><i class='bx bxs-calendar'></i></button>
+                    <div id="Quick-Menu-Button-Container" class="flex flex-col justify-around mt-2 text-3xl">
+                        <button class="bg-red-800 hover:bg-red-700 Quick-Menu-Button"><i
+                                class='bx bx-add-to-queue'></i></button>
+                        <button class="bg-blue-800 hover:bg-blue-700 Quick-Menu-Button"><i
+                                class='bx bxs-group'></i></button>
+                        <button class="bg-green-800 hover:bg-green-700 Quick-Menu-Button"><i
+                                class='bx bxs-calendar'></i></button>
+                    </div>
                 </div>
             </div>
         </div>
