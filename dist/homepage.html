@@ -108,7 +108,7 @@
     <script type="text/javascript">
       var counter = 2;
       var autoSlideInterval;
-      document.getElementById("radio" + 1).checked = true;
+
       // Function to handle auto-slide
       function autoSlide() {
         autoSlideInterval = setInterval(function () {
@@ -117,20 +117,22 @@
           if (counter > 4) {
             counter = 1;
           }
-        }, 8000);
+        }, 15000);
       }
+
       // Event listener for radio buttons
       document
         .querySelectorAll('input[type="radio"][name="radio-btn"]')
         .forEach(function (radio) {
           radio.addEventListener("click", function () {
-            clearInterval(autoSlideInterval); // Pause auto-slide for 30 seconds
+            clearInterval(autoSlideInterval); // Pause auto-slide
 
             // Get the clicked radio button's ID and extract the number
             var clickedButtonNumber = parseInt(this.id.replace("radio", ""));
             counter = clickedButtonNumber; // Update the counter with the clicked button's number
 
-            setTimeout(autoSlide, 30000); // Resume auto-slide after 30 seconds
+            // Restart auto-slide
+            autoSlide();
           });
         });
 
