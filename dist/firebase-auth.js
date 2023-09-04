@@ -6,18 +6,10 @@ import {
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
 import {
-  getDatabase,
-  ref,
-  push,
-  set,
-} from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
-
-/*
-import {initializeApp} from 'firebase/firebase-app'
-import {getAuth,
-  createUserWithEmailAndPassword, uid} from 'firebase/firebase-auth'
-
-*/
+  getFirestore,
+  doc,
+  setDoc,
+} from "https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -32,7 +24,6 @@ const firebaseConfig = {
   messagingSenderId: "742332640642",
   appId: "1:742332640642:web:c387955abebf8de1d2f39b",
   measurementId: "G-2RRFC79C48",
-  databaseUrl: "https://weeklyplanner2-63de7-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
@@ -40,39 +31,37 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 
-const db = getDatabase(app);
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
 
 function signUpUser() {
   const inputemail = document.getElementById("inputemail").value;
   const inputpw = document.getElementById("inputpassword").value;
   const inputpw2 = document.getElementById("inputpassword2").value;
-  const btnregister = document.getElementById("btnregister");
-  const firstName = document.getElementById("inputFirstName").value;
-  const secondName = document.getElementById("inputSecondName").value;
-  const dateOfBirth = document.getElementById("inputBirthday").value;
 
   const passwordMatch = inputpw === inputpw2;
 
   if (passwordMatch) {
-    console.log(inputemail + " " + inputpw);
-    createUserWithEmailAndPassword(auth, inputemail, inputpw)
-      .then((userCredential) => {
-        // Signed in
+    createUserWithEmailAndPassword(auth, inputemail, inputpw).then(
+      (userCredential) => {
         const user = userCredential.user;
-        set(ref(db, "users/" + user.uid), {
-          vorname: firstName,
-          nachname: secondName,
-          geburtstag: dateOfBirth,
-        });
-        console.log("finished");
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-      });
+        InsertUserToDB(user.uid);
+      }
+    );
   }
+}
+
+async function InsertUserToDB(uid) {
+  const firstName = document.getElementById("inputFirstName").value;
+  const secondName = document.getElementById("inputSecondName").value;
+  const dateOfBirth = document.getElementById("inputBirthday").value;
+
+  await setDoc(doc(db, "users", uid), {
+    vorname: firstName,
+    nachname: secondName,
+    geburtstag: dateOfBirth,
+    uid: uid,
+  });
 }
 
 btnregister.addEventListener("click", signUpUser);
