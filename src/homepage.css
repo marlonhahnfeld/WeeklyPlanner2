@@ -3,6 +3,7 @@ body {
   padding: 0;
   justify-content: center;
   align-items: center;
+  background-color: rgb(30, 41, 59);
 }
 
 * {
@@ -72,7 +73,6 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #2696e9;
 }
 
 .home:before {
@@ -117,6 +117,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter:blur(20px);
 }
 
 @media (max-width: 1040px) {
@@ -140,7 +141,7 @@ section {
   border-radius: 10px;
   overflow: hidden;
   position: absolute;
-  left: 25%;
+  left: 28%;
   margin-top: 700px;
 }
 
@@ -158,7 +159,7 @@ section {
 .slide {
   width: 20%;
   transition: 2.5s;
-  border: 3px solid rgba(2, 9, 20, 0.9); /* Add a border */
+  /*border: 3px solid rgba(2, 9, 20, 0.9); /* Add a border */
   border-radius: 10px;
   background-color: rgb(30, 41, 59, 0.9);
 }
@@ -166,6 +167,8 @@ section {
 .slide img{
   width: 800px;
   height: 500px;
+  opacity: 0.8;
+  border-radius: 10px;
 }
 
 
