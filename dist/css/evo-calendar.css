@@ -27,7 +27,7 @@ input:focus, textarea:focus, button:focus {
 }
 .evo-calendar {
     position: relative;
-    background-color: #fbfbfb;
+    background-color: #fff;
     color: #5a5a5a;
     width: 100%;
     -webkit-box-shadow: 0 10px 50px -20px #8773c1;
@@ -268,7 +268,7 @@ tr.calendar-body .calendar-day .day[disabled] {
     position: absolute;
     top: 0;
     right: 0;
-    width: 400px;
+    width: 250px;
     height: 100%;
     padding: 70px 30px 60px 30px;
     background-color: #fbfbfb;
