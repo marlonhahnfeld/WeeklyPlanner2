@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <a href="#" class="brand">Travel</a>
+      <a href="#" class="brand">Weeklyplanner</a>
       <div class="navigation">
         <div class="navigation-items">
           <a href="#">Home</a>
@@ -35,7 +35,6 @@
         muted
         loop
       ></video>
-      <!-- no icons yet -->
       <div class="media-icons">
         <a href="#"> <i class="fab fa-facebook-f"></i></a>
         <a href="#"> <i class="fab fa-instagram"></i></a>
@@ -45,25 +44,27 @@
       <div class="slider">
         <!-- slides start -->
         <div class="slides">
-          <div class="slide active">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <div class="slide first">
             <div class="content">
               <h1>
-                Wonderful1.<br />
-                <span>Island1</span>
+                Why<br />
+                <span>Weeklyplanner?</span>
               </h1>
-              <p>Responsive site - HTML CSS & Javascript</p>
+              <p>
+                Responsive site - HTML CSS & Javascript Responsive site - HTML
+                CSS & Javascript Responsive site - HTML CSS & Javascript
+                Responsive site - HTML CSS & Javascript Responsive site - HTML
+                CSS & Javascript
+              </p>
               <a href="#">Read More</a>
             </div>
           </div>
           <div class="slide">
-            <div class="content">
-              <h1>
-                Wonderful2.<br />
-                <span>Island2</span>
-              </h1>
-              <p>Responsive website - HTML CSS & Javascript</p>
-              <a href="#">Read More</a>
-            </div>
+            <img src="../res/1.jpg" alt="" />
           </div>
           <div class="slide">
             <div class="content">
@@ -75,7 +76,7 @@
               <a href="#">Read More</a>
             </div>
           </div>
-          <div class="slide fourth">
+          <div class="slide">
             <div class="content">
               <h1>
                 Wonderful4.<br />
@@ -85,63 +86,57 @@
               <a href="#">Read More</a>
             </div>
           </div>
+
+          <!-- slider-navigation-auto -->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
         </div>
         <!-- slides end -->
-
-        <!-- slider-navigation-auto -->
-        <div class="slider-navigation-auto">
-          <label for="radio1" class="nav-btn-auto1"></label>
-          <label for="radio2" class="nav-btn-auto2"></label>
-          <label for="radio3" class="nav-btn-auto3"></label>
-          <label for="radio4" class="nav-btn-auto4"></label>
+        <!-- slider-navigation-manual -->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
         </div>
       </div>
-
-      <!-- slider-navigation-manual -->
-      <div class="slider-navigation-manual">
-        <div class="nav-btn"></div>
-        <div class="nav-btn"></div>
-        <div class="nav-btn"></div>
-        <div class="nav-btn"></div>
-      </div>
     </section>
-
     <script type="text/javascript">
-      const slides = document.querySelectorAll(".slide");
-      const radioButtons = document.querySelectorAll(
-        'input[type="radio"][name="radio-btn"]'
-      );
-      let currentSlideIndex = 0;
-
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          if (i === index) {
-            slide.classList.add("active");
-          } else {
-            slide.classList.remove("active");
+      var counter = 2;
+      var autoSlideInterval;
+      document.getElementById("radio" + 1).checked = true;
+      // Function to handle auto-slide
+      function autoSlide() {
+        autoSlideInterval = setInterval(function () {
+          document.getElementById("radio" + counter).checked = true;
+          counter++;
+          if (counter > 4) {
+            counter = 1;
           }
+        }, 8000);
+      }
+
+      // Event listener for radio buttons
+      document
+        .querySelectorAll('input[type="radio"][name="radio-btn"]')
+        .forEach(function (radio) {
+          radio.addEventListener("click", function () {
+            clearInterval(autoSlideInterval); // Pause auto-slide for 30 seconds
+
+            // Get the clicked radio button's ID and extract the number
+            var clickedButtonNumber = parseInt(this.id.replace("radio", ""));
+            counter = clickedButtonNumber; // Update the counter with the clicked button's number
+
+            setTimeout(autoSlide, 30000); // Resume auto-slide after 30 seconds
+          });
         });
-      }
 
-      function updateSlideIndex() {
-        currentSlideIndex = Array.from(radioButtons).findIndex(
-          (radio) => radio.checked
-        );
-      }
-
-      radioButtons.forEach((radio, index) => {
-        radio.addEventListener("change", () => {
-          showSlide(index);
-        });
-      });
-
-      function goToNextSlide() {
-        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-        showSlide(currentSlideIndex);
-        radioButtons[currentSlideIndex].checked = true;
-      }
-
-      setInterval(goToNextSlide, 5000); // Auto slide every 5 seconds
+      // Start auto-slide
+      autoSlide();
     </script>
     <!-- better Slideshow Start -->
   </body>
