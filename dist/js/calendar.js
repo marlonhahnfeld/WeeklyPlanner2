@@ -1,12 +1,24 @@
-const addButton = document.getElementById("Add-Appointment-Button");
+/**
+const dayArray = [
+  "Montag",
+  "Dienstag",
+  "Mittwoch",
+  "Donnerstag",
+  "Freitag",
+  "Samstag",
+  "Sonntag",
+];
 
-function addAppointment() {
-  console.log("Test");
-  const title = prompt("Bitte geben Sie den Titel des Termins ein:");
-  const date = prompt("Bitte geben Sie das Datum des Termins ein:");
-  const priority = prompt("Bitte geben Sie die Priorität des Termins ein:");
+const dayElements = document.querySelectorAll(".Day-Class");
 
-  console.log("Titel:", title);
-  console.log("Datum:", date);
-  console.log("Priorität:", priority);
-}
+dayElements.forEach((dayElement) => {
+  let headerTag = document.createElement("h5");
+  headerTag.classList.add("text-h5");
+  const dataIndex = dayElement.getAttribute("data-index");
+  const dayName = dayArray[dataIndex];
+  headerTag.textContent = dayName; 
+  
+  dayElement.appendChild(headerTag); // Hängen Sie das h4-Element an das dayElement an
+});
+
+ */

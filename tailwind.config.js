@@ -12,6 +12,8 @@ module.exports = {
         BeigeCustom: "#FFF4E0",
         RedCustom: "#B46060",
         OrangeCustom: "#FFBF9B",
+        SecondPrioCustom: "#3252AD",
+        PrioCustom: "#6989D0",
       },
       fontSize: {
         h1: "3.5rem",

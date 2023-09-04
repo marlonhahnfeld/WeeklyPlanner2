@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * Landing-Page nach Login
 .Appointment-Button {
   min-width: 260px;
   width: 325px;
@@ -22,4 +23,17 @@
   border-radius: 5%;
   height: 90px;
   width: 90px;
+}
+
+*/
+
+.Appointment-Button {
+  width: 115px;
+  height: 80px;
+  border-radius: 5px;
+
+}
+
+.Appointment-Button:hover {
+  background: rgb(105, 155, 206);
 }
