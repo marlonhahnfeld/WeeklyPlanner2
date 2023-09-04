@@ -689,8 +689,16 @@ video {
   width: 800px;
 }
 
+.w-\[900px\] {
+  width: 900px;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-\[850px\] {
+  width: 850px;
 }
 
 .flex-grow {
