@@ -34,6 +34,8 @@ const auth = getAuth(app);
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 
+const btnLogin = document.getElementById("btnLogin");
+
 function signUpUser() {
   const inputemail = document.getElementById("inputemail").value;
   const inputpw = document.getElementById("inputpassword").value;
