@@ -57,7 +57,7 @@ function signInUser() {
       const user = userCredential.user;
       console.log("LOGIN SUCCESSFUL");
       // Ersetzen der aktuellen URL durch "/neue-seite.html"
-      window.location.href = "../homepage.html";
+      location.assign("../dist/landing-page-nach-login.html");
       // ...
     })
     .catch((error) => {
