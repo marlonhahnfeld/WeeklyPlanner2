@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Faustina: 'Faustina',
+        
       },
       colors: {
         GreyCustom: '#4D4D4D',
