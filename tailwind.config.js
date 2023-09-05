@@ -5,7 +5,9 @@ module.exports = {
     extend: {
       fontFamily: {
         Faustina: "Faustina",
+
         SegoeUI: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+
       },
       colors: {
         GreyCustom: "#4D4D4D",
