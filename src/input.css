@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .Appointment-Button {
   width: 115px;
   height: 80px;
@@ -21,8 +20,8 @@
 
 .Day-Class {
   width: 115px;
-
-body {
+}
+.body {
   margin: 0;
   padding: 0;
   justify-content: center;
@@ -54,13 +53,13 @@ body {
   transition: 2s;
 }
 
-.slide img{
+.slide img {
   width: 800px;
   height: 500px;
 }
 
 /* css for manual slide navigation*/
-.navigation-manual{
+.navigation-manual {
   position: absolute;
   width: 800px;
   margin-top: -40px;
@@ -68,41 +67,41 @@ body {
   justify-content: center;
 }
 
-.manual-btn{
-  border: 2px solid #40D3DC;
+.manual-btn {
+  border: 2px solid #40d3dc;
   padding: 5px;
   border-radius: 10px;
-  cursor:pointer;
+  cursor: pointer;
   transition: 1s;
 }
 
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
   margin-right: 40px;
 }
 
-.manual-btn:hover{
-  background: #40D3DC;
+.manual-btn:hover {
+  background: #40d3dc;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked ~ .first {
   margin-left: 0;
 }
 
-#radio2:checked ~ .first{
+#radio2:checked ~ .first {
   margin-left: -20%;
 }
 
-#radio3:checked ~ .first{
+#radio3:checked ~ .first {
   margin-left: -40%;
 }
 
-#radio4:checked ~ .first{
+#radio4:checked ~ .first {
   margin-left: -60%;
 }
 
 /* css for automatic navigation */
 
-.navigation-auto{
+.navigation-auto {
   position: absolute;
   width: 800px;
   display: flex;
@@ -110,34 +109,29 @@ body {
   margin-top: 460px;
 }
 
-.navigation-auto div{
-  border: 2px solid #40D3DC;
+.navigation-auto div {
+  border: 2px solid #40d3dc;
   padding: 5px;
   border-radius: 10px;
   transition: 1s;
 }
 
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
   margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
-  background: #40D3DC;
-
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #40d3dc;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
-  background: #40D3DC;
-  
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #40d3dc;
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3{
-  background: #40D3DC;
-  
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #40d3dc;
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn4{
-  background: #40D3DC;
-  
-
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #40d3dc;
 }
