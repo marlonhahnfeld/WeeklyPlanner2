@@ -7,13 +7,99 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Faustina&display=swap"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="bg-GreyCustom">
-   
-    <input type="text" class="bg-cyan-300" />
+
+  <body class="bg-slate-800">
+    <!--BUTTONS AT TOP START-->
+    <div class="flex items-center gap-8">
+      <img src="/res/LOGO_TRANS.png" alt="Example Image" class="w-32 h-22" />
+      <button
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg border-[1px] border-slate-400 font-Faustina text-white w-44 h-16 bg-slate-600 hover:shadow-lg hover:shadow-slate-400"
+      >
+        Placeholder1
+      </button>
+      <button
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg border-[1px] border-slate-400 font-Faustina text-white w-44 h-16 bg-slate-600 hover:shadow-lg hover:shadow-slate-400"
+      >
+        Placeholder2
+      </button>
+      <button
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg border-[1px] border-slate-400 font-Faustina text-white w-44 h-16 bg-slate-600 hover:shadow-lg hover:shadow-slate-400"
+      >
+        Placeholder3
+      </button>
+      <button
+        class="transition-transform duration-300 ease-out transform active:translate-y-3 rounded-lg border-[1px] border-slate-400 font-Faustina text-white w-44 h-16 bg-slate-600 hover:shadow-lg hover:shadow-slate-400"
+      >
+        Placeholder4
+      </button>
+      <div class="flex justify-end ml-[400px]">
+        <button
+          class="flex items-center justify-center transition-transform text-2xl duration-300 ease-out transform active:translate-y-3 rounded-lg font-Faustina text-white w-52 h-20 bg-RedCustom shadow-lg shadow-BeigeCustom hover:bg-OrangeCustom ml-16 mr-8"
+        >
+          <span class="mr-2">Login</span>
+          <i class="text-3xl bx bxs-arrow-to-right"></i>
+        </button>
+      </div>
+    </div>
+    <!--BUTTONS AT TOP END-->
+
+    <!-- better SLideshow Start -->
+    <div class="slider">
+      <div class="slides">
+        <!-- radio buttons start -->
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+        <!-- radio buttons end -->
+        <!-- slide images start -->
+        <div class="slide first">
+          <img src="../res/1.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../res/2.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../res/3.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../res/4.png" alt="" />
+        </div>
+        <!-- slide images end -->
+        <!-- automatic navigation start -->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!-- automatic navigation end -->
+      </div>
+      <!-- manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!-- manual navigation end-->
+    </div>
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 5000);
+    </script>
+    <!-- better SLideshow End -->
+
   </body>
 </html>
