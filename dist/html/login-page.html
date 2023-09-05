@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div class="flex items-center justify-center h-screen bg-slate-800" id="body">
+        <img
+          src="../../res/img/Logo.png"
+          class="absolute top-[230px] w-36"
+          id="logo-nobg"
+        />
+        <div class="p-6 rounded-md w-96 bg-slate-700" id="innerbody">
+          <div class="hidden" id="btnback">
+            <i class="text-white fa-solid fa-arrow-left"></i>
+          </div>
+          <h1
+            class="block mt-10 mb-10 font-serif text-3xl font-semibold text-center text-white"
+          >
+            Login
+          </h1>
+          <label for="inputLoginEmail" class="block mb-1 text-base text-white mt-30"
+          >Email</label
+        >
+        <input
+        type="text"
+        autocomplete="off"
+        class="px-1 mb-5 text-white rounded-md bg-slate-800"
+        placeholder="Email"
+        id="inputLoginEmail"
+      />
+    <label for="inputLoginPW" class="block mb-1 text-base text-white mt-30"
+      >Password</label
+    >
+    <input
+          type="password"
+          autocomplete="off"
+          class="px-1 mb-5 text-white rounded-md bg-slate-800"
+          placeholder="Password"
+          id="inputLoginPW"
+        />
+        <!--!Passwort vergessen link-->
+        <a href="landing-page.html" class="block text-white hover:text-RedCustom">Password vergessen?</a>
+    <div class="flex justify-end ">
+        <input
+          type="submit"
+          value="Login"
+          class="bg-RedCustom rounded-md text-xl ml-10 text-white hover:bg-red-950 px-2 py-1.5"
+          id="btnLogin"
+        >
+        
+        </input>
+        </div>
+        <script src="../js/firebase-auth-login.js" type="module"></script>
+  </body>
+</html>
