@@ -1,0 +1,289 @@
+body {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(30, 41, 59);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  transition: 0.5s ease;
+  background-color: rgb(30, 41, 59);
+}
+
+header .brand {
+  color: #b46060;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation-items a {
+  position: relative;
+  color: #fff;
+  font-size: large;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3 ease;
+}
+
+header .navigation-items a:before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation-items a:hover:before {
+  width: 100%;
+}
+
+section {
+  padding: 100px 200px;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home:before {
+  z-index: 40;
+  content: "";
+  position: absolute;
+  /*background: rgba(3,96,251,0.3);*/
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.media-icons {
+  z-index: 40;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease;
+  margin-top: 40%;
+}
+
+.media-icons a {
+  color: #fff;
+  font-size: 1.6em;
+}
+
+.media-icons a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.media-icons a:hover {
+  transform: scale(1.3);
+}
+
+.home video {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter:blur(20px);
+}
+
+@media (max-width: 1040px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  header .navigation {
+    display: none;
+  }
+}
+
+.slider {
+  z-index: 40;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 28%;
+  margin-top: 700px;
+}
+
+.slides {
+  z-index: 40;
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2.5s;
+  /*border: 3px solid rgba(2, 9, 20, 0.9); /* Add a border */
+  border-radius: 10px;
+  background-color: rgb(30, 41, 59, 0.9);
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+
+/* css for manual slide navigation*/
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #40d3dc;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* css for automatic navigation */
+
+.navigation-auto {
+  position: absolute;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #40d3dc;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #40d3dc;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #40d3dc;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #40d3dc;
+}
+
+.content {
+  color: #fff;
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.content h1 {
+  font-size: 3em;
+  color: #b46060;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+
+.content h1 span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.content p {
+  color: #b46060;
+  margin-bottom: 65px;
+  font-size: 1.4em;
+}
+
+.content a {
+  background: #fff;
+  padding: 15px 35px;
+  color: #b46060;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+}
