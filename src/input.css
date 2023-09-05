@@ -1,6 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.Appointment-Button {
+  width: 115px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.Appointment-Button:hover {
+  background: rgb(105, 155, 206);
+}
+
+.Quick-Menu-Button {
+  border-radius: 5%;
+  height: 90px;
+  width: 90px;
+}
+
+.Day-Class {
+  width: 115px;
+
 body {
   margin: 0;
   padding: 0;
@@ -118,4 +139,5 @@ body {
 #radio4:checked ~ .navigation-auto .auto-btn4{
   background: #40D3DC;
   
+
 }
