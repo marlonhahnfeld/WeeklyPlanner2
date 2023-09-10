@@ -2,6 +2,7 @@ const dropdownButton = document.getElementById("User-Dropdown-Button");
 const dropdownMenu = document.getElementById("User-Dropdown-Menu");
 const sideMenuButton = document.getElementById("Menu-Button");
 const sideMenuContainer = document.getElementById("Menu-Container");
+const btnAdd = document.getElementById("btnAdd");
 
 /**
  * * Funktion, um User-Menü anzeigen zu lassen
@@ -56,3 +57,7 @@ function showSideMenu() {
     sideMenuContainer.classList.add("-translate-x-full");
   }
 }
+
+btnAdd.addEventListener("click", () => {
+  console.log("Test");
+});
