@@ -558,10 +558,6 @@ video {
   top: 0px;
 }
 
-.top-1\/4 {
-  top: 25%;
-}
-
 .top-\[212px\] {
   top: 212px;
 }
@@ -697,10 +693,6 @@ video {
   width: 24rem;
 }
 
-.w-\[200px\] {
-  width: 200px;
-}
-
 .w-\[325px\] {
   width: 325px;
 }
@@ -747,6 +739,10 @@ video {
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -765,6 +761,10 @@ video {
 
 .justify-around {
   justify-content: space-around;
+}
+
+.justify-items-end {
+  justify-items: end;
 }
 
 .gap-1 {
@@ -908,12 +908,24 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .text-center {
   text-align: center;
 }
 
 .text-start {
   text-align: start;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.align-text-bottom {
+  vertical-align: text-bottom;
 }
 
 .font-Faustina {

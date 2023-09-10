@@ -20,13 +20,7 @@
         Wetterdatenquelle: <a href="https://wetterlabs.de/wetter_hamburg/5_tage/">Hamburg wetter 5 tage</a></div>
     <script async src="https://static1.wetterlabs.de/widgetjs/?id=idea1e53456c46d"></script>
     -->
-    <div class="absolute w-[200px] top-1/4 right-0">
-        <a class="weatherwidget-io" href="https://forecast7.com/de/53d559d99/hamburg/" data-label_1="HAMBURG"
-            data-label_2="WETTER" data-theme="original">HAMBURG WETTER</a>
-        <script>
-            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-        </script>
-    </div>
+
     <div id="Upper-Body" class="flex flex-wrap items-start justify-between m-5">
         <div id="Menu-Container"
             class="absolute top-0 left-0 z-10 flex flex-col justify-between w-48 h-screen transition-transform duration-300 transform -translate-x-full bg-slate-700">
@@ -86,7 +80,7 @@
             Hallo Marlon!
         </h1>
     </div>
-    <div id="Main-Content-Container" class="flex mt-5 text-white mx-14">
+    <div id="Main-Content-Container" class="flex justify-between mt-5 text-white mx-14">
         <div id="Calendar-Appointment-Container">
             <div id="Appointment-Container" class="flex justify-between w-[900px]">
                 <div id="Upcoming-Appointment-Container" class="p-[13px] border">
@@ -321,17 +315,33 @@
                         </div>
                     </div>
                 </div>
-                <div id="Quick-Menu-Button-Container" class="flex flex-col justify-around mt-2 text-3xl">
-                    <button class="bg-red-800 hover:bg-red-700 Quick-Menu-Button"><i
-                            class='bx bx-add-to-queue'></i></button>
-                    <button class="bg-blue-800 hover:bg-blue-700 Quick-Menu-Button"><i
-                            class='bx bxs-group'></i></button>
-                    <button class="bg-green-800 hover:bg-green-700 Quick-Menu-Button"><i
-                            class='bx bxs-calendar'></i></button>
-                </div>
             </div>
         </div>
-    </div>
+        <div id="Quick-Menu-Button-Container" class="flex flex-col justify-between mt-2 text-3xl">
+            <a class="pb-5 rounded-lg weatherwidget-io" href="https://forecast7.com/de/53d559d99/hamburg/"
+                data-label_1="HAMBURG" data-mode="Current" data-days="3" data-theme="original">HAMBURG</a>
+            <script>
+                !(function (d, s, id) {
+                    var js,
+                        fjs = d.getElementsByTagName(s)[0];
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://weatherwidget.io/js/widget.min.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                })(document, "script", "weatherwidget-io-js");
+            </script>
+            <button class="bg-red-800 hover:bg-red-700 Quick-Menu-Button" id="btnAdd">
+                <i class="bx bx-add-to-queue"></i>
+            </button>
+            <button class="bg-blue-800 hover:bg-blue-700 Quick-Menu-Button">
+                <i class="bx bxs-group"></i>
+            </button>
+            <button class="bg-green-800 hover:bg-green-700 Quick-Menu-Button">
+                <i class="bx bxs-calendar"></i>
+            </button>
+        </div>
     </div>
     <script src="../js/logik-landing-page-nach-login.js"></script>
 </body>
