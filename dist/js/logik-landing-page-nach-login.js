@@ -3,6 +3,7 @@ const dropdownMenu = document.getElementById("User-Dropdown-Menu");
 const sideMenuButton = document.getElementById("Menu-Button");
 const sideMenuContainer = document.getElementById("Menu-Container");
 const btnAdd = document.getElementById("btnAdd");
+const closeAdd = document.getElementById("closeAdd");
 
 /**
  * * Funktion, um User-Menü anzeigen zu lassen
@@ -58,6 +59,40 @@ function showSideMenu() {
   }
 }
 
-btnAdd.addEventListener("click", () => {
-  console.log("Test");
-});
+btnAdd.addEventListener("click", openAppointmentPopUp);
+
+function openAppointmentPopUp() {
+  const maincontent = document.getElementById("Main-Content-Container");
+  const popup = document.getElementById("popup");
+  popup.classList.toggle("hidden");
+  maincontent.classList.toggle("blur");
+
+  // Animate the popup
+  popup.classList.add("fadeIn");
+  popup.classList.add("scaleIn");
+}
+
+closeAdd.addEventListener("click", closeAddAppointment);
+
+function closeAddAppointment() {
+  const popup = document.getElementById("popup");
+  const maincontent = document.getElementById("Main-Content-Container");
+  popup.classList.toggle("hidden");
+  maincontent.classList.toggle("blur");
+  //handleClick(e);
+}
+
+/**
+ * 
+ * function handleClick(e) {
+  // Das Target des Klicks ermitteln
+  const target = e.target;
+  // Do something with the target
+  if ((taget = !popup)) {
+    const popup = document.getElementById("popup");
+    const maincontent = document.getElementById("Main-Content-Container");
+    popup.classList.toggle("hidden");
+    maincontent.classList.toggle("blur");
+  }
+}
+ */
