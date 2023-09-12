@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input and Save</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body class="bg-slate-600">
+    <h1>Input and Save</h1>
+
+    <label for="titelInput">Titel:</label>
+    <input type="text" id="titelInput" placeholder="Enter Titel" />
+
+    <label for="datumInput">Datum:</label>
+    <input type="date" id="datumInput" />
+
+    <label for="ortInput">Ort:</label>
+    <input type="text" id="ortInput" placeholder="Enter Ort" />
+
+    <label for="beschreibungInput">Beschreibung:</label>
+    <textarea
+      id="beschreibungInput"
+      placeholder="Enter Beschreibung"
+    ></textarea>
+
+    <label for="prioritaetInput">Priorität:</label>
+    <select id="prioritaetInput">
+      <option value="niedrig">Niedrig</option>
+      <option value="mittel">Mittel</option>
+      <option value="hoch">Hoch</option>
+    </select>
+
+    <button onclick="saveTermin()">Submit</button>
+    <button onclick="displayAllTerminObjects()">Show All Termin Objects</button>
+    <div id="terminBox" class="overflow-y-auto h-64 w-64 border-4 border-gray-300 p-4 hidden">
+        <ul id="terminList"></ul>
+    </div>
+    <script type="text/javascript" src="../js/backend.js"></script>
+  </body>
+</html>
