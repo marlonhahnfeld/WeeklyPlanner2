@@ -60,7 +60,10 @@ function showSideMenu() {
 }
 
 btnAdd.addEventListener("click", openAppointmentPopUp);
-
+/**
+ * * Öffnet das Termin hinzufügen popup.
+ *
+ */
 function openAppointmentPopUp() {
   const maincontent = document.getElementById("Main-Content-Container");
   const popup = document.getElementById("popup");
@@ -74,25 +77,67 @@ function openAppointmentPopUp() {
 
 closeAdd.addEventListener("click", closeAddAppointment);
 
+/**
+ * * Schließt das Termin hinzufügen popup
+ *
+ */
 function closeAddAppointment() {
   const popup = document.getElementById("popup");
   const maincontent = document.getElementById("Main-Content-Container");
   popup.classList.toggle("hidden");
   maincontent.classList.toggle("blur");
-  //handleClick(e);
 }
 
 /**
- * 
- * function handleClick(e) {
-  // Das Target des Klicks ermitteln
-  const target = e.target;
-  // Do something with the target
-  if ((taget = !popup)) {
-    const popup = document.getElementById("popup");
-    const maincontent = document.getElementById("Main-Content-Container");
-    popup.classList.toggle("hidden");
-    maincontent.classList.toggle("blur");
+ * Class representing an appointment.
+ *
+ * * @class Appointment
+ * * @property {string} title - The title of the appointment.
+ * * @property {string} date - The date of the appointment.
+ * * @property {string} place - The place of the appointment.
+ * * @property {string} description - The description of the appointment.
+ * * @property {string} priority - The priority of the appointment.
+ * TODO getter und setter adden
+ */
+class Appointment {
+  constructor(title, date, place, description, priority) {
+    this.title = title;
+    this.date = date;
+    this.place = place;
+    this.description = description;
+    this.priority = priority;
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnAppointmentAdd = document.getElementById("btnAppointmentAdd");
+  btnAppointmentAdd.addEventListener("click", createAppointment);
+});
+
+/**
+ * * Erstellt einen Termin mit Eigenschaften aus den Inputs und schließt das Popup danach
+ * ! Nur Title und Date+Time werden benötigt, alles weitere ist optional
+ *
  */
+function createAppointment() {
+  const appointmentTitle = document.getElementById("inputTitle").value;
+  const appointmentDate = document.getElementById("inputDate").value;
+  const appointmentPlace = document.getElementById("inputPlace").value;
+  const appointmentDescription =
+    document.getElementById("inputDescription").value;
+  const appointmentPriority = document.getElementById("inputPriorities").value;
+
+  if ((appointmentTitle && appointmentDate) !== "") {
+    const appointment = new Appointment(
+      appointmentTitle,
+      appointmentDate,
+      appointmentPlace,
+      appointmentDescription,
+      appointmentPriority
+    );
+    console.log(appointment);
+    closeAddAppointment();
+  } else {
+    // TODO irgendwie benachrichtigen, dass eingaben benötigt werden
+  }
+}

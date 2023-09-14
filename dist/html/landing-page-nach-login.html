@@ -518,7 +518,7 @@
         </div>
       </div>
     </div>
-    <div id="popup" class="hidden z-10 absolute top-[30%] left-[39%]">
+    <div id="popup" class="hidden z-10 absolute top-[20%] left-[39%]">
       <div class="flex items-center justify-center">
         <div
           class="p-6 rounded-md w-96 bg-slate-700 shadow-lg shadow-PrioCustom"
@@ -542,6 +542,7 @@
             class="px-1 mb-5 text-white rounded-md bg-slate-800"
             placeholder="Titel"
             id="inputTitle"
+            required
           />
           <label for="inputDate" class="block mb-1 text-base text-white mt-30"
             >Datum</label
@@ -551,14 +552,50 @@
             class="px-1 mb-2 text-white rounded-md bg-slate-800"
             placeholder="Datum"
             id="inputDate"
+            required
           />
+          <label for="inputPlace" class="block mb-1 text-base text-white mt-30"
+            >Ort</label
+          >
+          <input
+            type="text"
+            class="px-1 mb-2 text-white rounded-md bg-slate-800"
+            placeholder="Ort"
+            id="inputPlace"
+          />
+          <label
+            for="inputDescription"
+            class="block mb-1 text-base text-white mt-30"
+            >Beschreibung</label
+          >
+
+          <textarea
+            name="inputDescription"
+            id="inputDescription"
+            cols="25"
+            rows="5"
+            placeholder="Beschreibung"
+            class="px-1 mb-2 text-white rounded-md bg-slate-800"
+          ></textarea>
+          <label for="inputPrio" class="block mb-1 text-base text-white mt-30"
+            >Priorität</label
+          >
+          <select
+            name="Priorities"
+            id="inputPriorities"
+            class="bg-slate-800 text-white"
+          >
+            <option value="niedrig">niedrig</option>
+            <option value="mittel">mittel</option>
+            <option value="hoch">hoch</option>
+          </select>
 
           <div class="flex justify-end">
             <input
               type="submit"
               value="Hinzufügen"
               class="bg-RedCustom rounded-md text-xl ml-10 text-white hover:bg-red-950 px-2 py-1.5"
-              id="btnLogin"
+              id="btnAppointmentAdd"
             />
           </div>
         </div>
