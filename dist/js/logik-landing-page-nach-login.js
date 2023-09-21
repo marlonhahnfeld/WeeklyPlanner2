@@ -1,3 +1,5 @@
+import {bloeff} from "../js/firebase-auth-login";
+
 const dropdownButton = document.getElementById("User-Dropdown-Button");
 const dropdownMenu = document.getElementById("User-Dropdown-Menu");
 const sideMenuButton = document.getElementById("Menu-Button");
@@ -109,6 +111,26 @@ class Appointment {
   }
 }
 
+	function getTitle() {
+		return this.title;
+	}
+
+	function getDate() {
+		return this.date;
+	}
+
+	function getPlace() {
+		return this.place;
+	}
+
+	function getDescription() {
+		return this.description;
+	}
+
+	function getPriority() {
+		return this.priority;
+	}
+
 document.addEventListener("DOMContentLoaded", () => {
   const btnAppointmentAdd = document.getElementById("btnAppointmentAdd");
   btnAppointmentAdd.addEventListener("click", createAppointment);
@@ -136,8 +158,22 @@ function createAppointment() {
       appointmentPriority
     );
     console.log(appointment);
+    saveAppointmentToDb(appointment);
     closeAddAppointment();
   } else {
     // TODO irgendwie benachrichtigen, dass eingaben benötigt werden
   }
 }
+
+async function saveAppointmentToDb(appointment) {
+  const user = auth.currentUser;
+  await setDoc(doc(db, "users", uid), {
+    appointmentTitle: getTitle(),
+    appointmentDate: getDate(),
+    appointmentPlace: getPlace(),
+    appointmentDescription: getDescription(),
+    appointmentPriority: getPriority(),
+  });
+}
+
+bloeff();

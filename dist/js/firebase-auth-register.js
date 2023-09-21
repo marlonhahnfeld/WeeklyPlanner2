@@ -50,6 +50,7 @@ function signUpUser() {
         InsertUserToDB(user.uid);
       }
     );
+    location.assign("../html/landing-page-nach-login.html");
   }
 }
 

@@ -32,7 +32,11 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(app);
+const db = getFirestore(app)
+
+export function bloeff(){
+  console.log("blöff");
+}
 
 async function InsertUserToDB(uid) {
   const firstName = document.getElementById("inputFirstName").value;
@@ -71,3 +75,7 @@ function signInUser() {
 }
 
 btnLogin.addEventListener("click", signInUser);
+
+export{
+  db, app, auth, firebaseConfig
+};
