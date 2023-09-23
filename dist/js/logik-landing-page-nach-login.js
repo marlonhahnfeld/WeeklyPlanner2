@@ -1,38 +1,4 @@
-// Import the functions you need from the SDKs you need
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
-import {
-  getFirestore,
-  doc,
-  setDoc,
-} from "https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore.js";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDGVWD9oopCpJxcurKz2R55FHwzNWuh9Cg",
-  authDomain: "weeklyplanner2-63de7.firebaseapp.com",
-  projectId: "weeklyplanner2-63de7",
-  storageBucket: "weeklyplanner2-63de7.appspot.com",
-  messagingSenderId: "742332640642",
-  appId: "1:742332640642:web:c387955abebf8de1d2f39b",
-  measurementId: "G-2RRFC79C48",
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-const auth = getAuth(app);
-
-// Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(app);
+import { db, doc, setDoc, auth } from "./firebase-interface.js";
 
 const dropdownButton = document.getElementById("User-Dropdown-Button");
 const dropdownMenu = document.getElementById("User-Dropdown-Menu");
@@ -40,6 +6,18 @@ const sideMenuButton = document.getElementById("Menu-Button");
 const sideMenuContainer = document.getElementById("Menu-Container");
 const btnAdd = document.getElementById("btnAdd");
 const closeAdd = document.getElementById("closeAdd");
+
+const btnSideBar = document
+  .getElementById("Menu-Button")
+  .addEventListener("click", showSideMenu);
+btnAdd.addEventListener("click", openAppointmentPopUp);
+
+closeAdd.addEventListener("click", closeAddAppointment);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnAppointmentAdd = document.getElementById("btnAppointmentAdd");
+  btnAppointmentAdd.addEventListener("click", createAppointment);
+});
 
 /**
  * * Funktion, um User-Menü anzeigen zu lassen
@@ -95,10 +73,8 @@ function showSideMenu() {
   }
 }
 
-btnAdd.addEventListener("click", openAppointmentPopUp);
 /**
- * * Öffnet das Termin hinzufügen popup.
- *
+ * * opens the appointment add popup
  */
 function openAppointmentPopUp() {
   const maincontent = document.getElementById("Main-Content-Container");
@@ -110,8 +86,6 @@ function openAppointmentPopUp() {
   popup.classList.add("fadeIn");
   popup.classList.add("scaleIn");
 }
-
-closeAdd.addEventListener("click", closeAddAppointment);
 
 /**
  * * Schließt das Termin hinzufügen popup
@@ -144,11 +118,6 @@ class Appointment {
     this.priority = priority;
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const btnAppointmentAdd = document.getElementById("btnAppointmentAdd");
-  btnAppointmentAdd.addEventListener("click", createAppointment);
-});
 
 /**
  * * Erstellt einen Termin mit Eigenschaften aus den Inputs und schließt das Popup danach

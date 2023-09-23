@@ -3,6 +3,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
 import {
   getAuth,
+  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
 import {
@@ -31,38 +32,13 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 
-// Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 
-function signUpUser() {
-  const inputemail = document.getElementById("inputemail").value;
-  const inputpw = document.getElementById("inputpassword").value;
-  const inputpw2 = document.getElementById("inputpassword2").value;
-
-  const passwordMatch = inputpw === inputpw2;
-
-  if (passwordMatch) {
-    createUserWithEmailAndPassword(auth, inputemail, inputpw).then(
-      (userCredential) => {
-        const user = userCredential.user;
-        InsertUserToDB(user.uid);
-      }
-    );
-    location.assign("../html/landing-page-nach-login.html");
-  }
-}
-
-async function InsertUserToDB(uid) {
-  const firstName = document.getElementById("inputFirstName").value;
-  const secondName = document.getElementById("inputSecondName").value;
-  const dateOfBirth = document.getElementById("inputBirthday").value;
-
-  await setDoc(doc(db, "users", uid), {
-    vorname: firstName,
-    nachname: secondName,
-    geburtstag: dateOfBirth,
-    uid: uid,
-  });
-}
-
-btnregister.addEventListener("click", signUpUser);
+export {
+  auth,
+  db,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  doc,
+  setDoc,
+};
