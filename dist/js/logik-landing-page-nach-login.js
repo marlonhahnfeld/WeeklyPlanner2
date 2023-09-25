@@ -7,6 +7,11 @@ const sideMenuContainer = document.getElementById("Menu-Container");
 const btnAdd = document.getElementById("btnAdd");
 const closeAdd = document.getElementById("closeAdd");
 
+const btnProfile = document
+  .getElementById("User-Dropdown-Button")
+  .addEventListener("click", showUserMenu);
+btnAdd.addEventListener("click", openAppointmentPopUp);
+
 const btnSideBar = document
   .getElementById("Menu-Button")
   .addEventListener("click", showSideMenu);
