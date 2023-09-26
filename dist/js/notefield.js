@@ -1,21 +1,36 @@
+const upperBodyContainer = document.getElementById("Upper-Body");
+const mainContentContainer = document.getElementById("Main-Content-Container");
+const greetingContainer = document.getElementById("Greeting-Container");
 const notePopUp = document.getElementById("Note-PopUp-Container");
+const addNoteButton = document.getElementById("Add-Note-Button");
+const dividerForBackground = document.getElementById("Divider-Background");
+const inputNoteTitle = document.getElementById("Input-Title");
+const inputNoteDesc = document.getElementById("Note-Desc");
 
 /**
- * * Funktion, um das PopUp anzeigen zu lassen
- * TODO: Wenn PopUp geöffnet wird, dann soll Hintergrund etwas bluren
+ * * Funktion, um Note-PopUp anzeigen zu lassen
  */
 function showPopUp() {
   notePopUp.classList.remove("hidden");
+  dividerForBackground.classList.remove("hidden");
+  upperBodyContainer.classList.add("opacity-25");
+  mainContentContainer.classList.add("opacity-25");
+  greetingContainer.classList.add("opacity-25");
 }
 
 /**
  * * Funktion, um das PopUp schließen zu lassen
- * TODO: Hover Effect - Rot Ton heller machen
  */
 function closePopUp() {
   let isHidden = notePopUp.classList.contains("hidden");
   if (!isHidden) {
+    inputNoteTitle.value = "";
+    inputNoteDesc.value = "";
     notePopUp.classList.add("hidden");
+    dividerForBackground.classList.add("hidden");
+    upperBodyContainer.classList.remove("opacity-25");
+    mainContentContainer.classList.remove("opacity-25");
+    greetingContainer.classList.remove("opacity-25");
   }
 }
 
@@ -24,7 +39,11 @@ function closePopUp() {
  * ! Import Use lässt andere Methoden nicht mehr funktionieren
  */
 function createNote() {
-  let title = document.getElementById("Input-Title").value;
-  let desc = document.getElementById("Input-Desc").value;
+  let title = inputNoteTitle.value;
+  let desc = inputNoteDesc.value;
   console.log(title + "\n" + desc);
+
+  inputNoteTitle.value = "";
+  inputNoteDesc.value = "";
+  closePopUp();
 }

@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="../output.css" />
 </head>
 
-<body class="bg-slate-800 font-SegoeUI">
+<body id="Body" class="bg-slate-800 font-SegoeUI">
     <!-- Option 1
     <div id="idea1e53456c46d"
         a='{"t":"g7bs","v":"1.2","lang":"de","locs":[1626],"ssot":"c","sics":"ds","cbkg":"#455A64","cfnt":"#FFFFFF","cend":"#FFFFFF00"}'>
         Wetterdatenquelle: <a href="https://wetterlabs.de/wetter_hamburg/5_tage/">Hamburg wetter 5 tage</a></div>
     <script async src="https://static1.wetterlabs.de/widgetjs/?id=idea1e53456c46d"></script>
     -->
-
+    <div id="Divider-Background" class="absolute z-10 hidden w-full h-[90%]"></div>
     <div id="Upper-Body" class="flex flex-wrap items-start justify-between m-5">
         <div id="Side-Menu-Container">
             <button id="Menu-Button" onclick="showSideMenu()" class="relative z-10 mt-2 text-4xl">
@@ -326,21 +326,6 @@
             <button id="Add-Note-Button" class="px-[25px] py-5 mb-10 rounded-[100%] bg-slate-400"
                 onclick="showPopUp()">+</button>
         </div>
-        <div id="Note-PopUp-Container" class="absolute left-[40%] w-[400px] rounded-md bg-slate-900 hidden">
-            <div id="Note-PopUp-Content" class="flex flex-col items-center">
-                <button class="absolute top-0 left-0 px-2 py-1 text-xl bg-red-900 rounded-tl-md"
-                    onclick="closePopUp()">X</button>
-                <h4 class="mt-2 text-center text-h4">Neue Notiz erstellen</h4>
-                <div class="mt-5 mb-5">
-                    <h6 class="text-h6">Titel</h6>
-                    <input id="Input-Title" class="w-64 mb-5 text-center text-black rounded-md" type="text"
-                        placeholder="Titel der Notiz">
-                    <h6 class="text-h6">Beschreibung</h6>
-                    <input id="Input-Desc" class="w-64 mb-5 text-center text-black rounded-md" type="text" placeholder="Beschreibung">
-                </div>
-                <button class="self-center p-2 mb-5 bg-slate-700 w-fit" onclick="createNote()">Save</button>
-            </div>
-        </div>
         <div id="Quick-Menu-Button-Container" class="flex flex-col justify-between mt-2 text-3xl">
             <a class="pb-5 rounded-lg weatherwidget-io" href="https://forecast7.com/de/53d559d99/hamburg/"
                 data-label_1="HAMBURG" data-mode="Current" data-days="3" data-theme="original">HAMBURG</a>
@@ -367,6 +352,26 @@
             </button>
         </div>
     </div>
+    <div id="Note-PopUp-Container" class="absolute top-[30%] left-[40%] w-[360px] z-10 rounded-md bg-slate-900 hidden">
+        <div id="Note-PopUp-Content" class="flex flex-col items-center text-white">
+            <button class="absolute top-0 left-0 px-2 py-1 text-xl bg-red-900 hover:bg-red-700 rounded-tl-md"
+                onclick="closePopUp()"><span class="text-lg">&#10005</span></button>
+            <h4 class="mt-2 text-center underline text-h4">Neue Notiz</h4>
+            <div class="mt-2 mb-2">
+                <h6 class="text-h6">Titel</h6>
+                <input id="Input-Title" maxlength="20" class="w-64 p-1 mb-5 text-black rounded-md" type="text"
+                    placeholder="Titel der Notiz">
+                <h6 class="text-h6">Beschreibung</h6>
+                <!--<input id="Input-Desc" class="w-64 h-20 mb-5 text-justify text-black break-words rounded-md" type="text"
+                    placeholder="Beschreibung"> -->
+                <textarea id="Note-Desc" maxlength="210" placeholder="Beschreibung der Notiz"
+                    class="w-64 p-1 text-black rounded-md resize-none h-[200px]"></textarea>
+            </div>
+            <button id="Add-Note-Button" class="self-center p-2 mb-5 rounded-lg bg-slate-700 hover:bg-slate-400 w-fit"
+                onclick="createNote()">Save</button>
+        </div>
+    </div>
+
     <script src="../js/logik-landing-page-nach-login.js"></script>
     <script src="../js/notefield.js"></script>
 </body>
