@@ -562,8 +562,8 @@ video {
   top: 0px;
 }
 
-.top-1\/4 {
-  top: 25%;
+.top-\[15\%\] {
+  top: 15%;
 }
 
 .top-\[20\%\] {
@@ -572,10 +572,6 @@ video {
 
 .top-\[230px\] {
   top: 230px;
-}
-
-.top-\[15\%\] {
-  top: 15%;
 }
 
 .z-10 {
@@ -649,6 +645,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -661,12 +661,12 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .block {
@@ -683,6 +683,14 @@ video {
 
 .h-\[100px\] {
   height: 100px;
+}
+
+.h-\[1200px\] {
+  height: 1200px;
+}
+
+.h-\[44px\] {
+  height: 44px;
 }
 
 .h-\[480px\] {
@@ -709,12 +717,20 @@ video {
   width: 24rem;
 }
 
+.w-\[1200px\] {
+  width: 1200px;
+}
+
 .w-\[325px\] {
   width: 325px;
 }
 
 .w-\[60\%\] {
   width: 60%;
+}
+
+.w-\[800px\] {
+  width: 800px;
 }
 
 .w-\[900px\] {
@@ -728,6 +744,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-20 {
+  width: 5rem;
 }
 
 .flex-grow {
@@ -827,9 +847,18 @@ video {
   border-width: 1px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.border-b-slate-700 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(51 65 85 / var(--tw-border-opacity));
 }
 
 .bg-PrioCustom {
@@ -865,6 +894,11 @@ video {
 .bg-red-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-slate-500 {
@@ -1013,9 +1047,82 @@ video {
   color: rgb(180 96 96 / var(--tw-text-opacity));
 }
 
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.decoration-wavy {
+  text-decoration-style: wavy;
+}
+
+.decoration-8 {
+  text-decoration-thickness: 8px;
+}
+
+.decoration-2 {
+  text-decoration-thickness: 2px;
+}
+
+.decoration-4 {
+  text-decoration-thickness: 4px;
+}
+
+.decoration-\[40px\] {
+  text-decoration-thickness: 40px;
+}
+
+.decoration-\[20px\] {
+  text-decoration-thickness: 20px;
+}
+
+.underline-offset-\[20px\] {
+  text-underline-offset: 20px;
+}
+
+.underline-offset-\[22px\] {
+  text-underline-offset: 22px;
+}
+
+.underline-offset-\[24px\] {
+  text-underline-offset: 24px;
+}
+
+.underline-offset-\[25px\] {
+  text-underline-offset: 25px;
+}
+
+.underline-offset-8 {
+  text-underline-offset: 8px;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
+.underline-offset-\[10px\] {
+  text-underline-offset: 10px;
+}
+
+.underline-offset-\[16px\] {
+  text-underline-offset: 16px;
+}
+
+.underline-offset-\[18px\] {
+  text-underline-offset: 18px;
+}
+
+.underline-offset-\[21px\] {
+  text-underline-offset: 21px;
 }
 
 .shadow-lg {
@@ -1219,6 +1326,11 @@ video {
 .hover\:text-RedCustom:hover {
   --tw-text-opacity: 1;
   color: rgb(180 96 96 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
