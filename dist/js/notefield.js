@@ -4,8 +4,9 @@ const greetingContainer = document.getElementById("Greeting-Container");
 const notePopUp = document.getElementById("Note-PopUp-Container");
 const addNoteButton = document.getElementById("Add-Note-Button");
 const dividerForBackground = document.getElementById("Divider-Background");
-const inputNoteTitle = document.getElementById("Input-Title");
-const inputNoteDesc = document.getElementById("Note-Desc");
+const inputNoteTitle = document.getElementById("Input-Note-Title");
+const inputNoteDesc = document.getElementById("Input-Note-Desc");
+const notesInnerContainer = document.getElementById("Notes-Inner-Container");
 
 /**
  * * Funktion, um Note-PopUp anzeigen zu lassen
@@ -42,6 +43,16 @@ function createNote() {
   let title = inputNoteTitle.value;
   let desc = inputNoteDesc.value;
   console.log(title + "\n" + desc);
+
+  let newNoteButton = document.createElement("btn");
+  newNoteButton.classList.add("Note-Button");
+
+  let newNoteButtonContent = document.createElement("div");
+  newNoteButtonContent.classList.add("Note-Content");
+
+  newNoteButtonContent.append(title);
+  newNoteButton.append(newNoteButtonContent);
+  notesInnerContainer.append(newNoteButton);
 
   inputNoteTitle.value = "";
   inputNoteDesc.value = "";

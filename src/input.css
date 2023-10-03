@@ -4,7 +4,10 @@
 
 @layer components {
   .Note-Button {
-    @apply w-[200px] h-[100px] rounded bg-slate-600;
+    @apply h-[150px] rounded-br bg-RedCustom hover:bg-red-400 cursor-pointer flex justify-center items-center;
+  }
+  .Note-Button .Note-Content {
+    @apply text-lg font-semibold;
   }
 }
 

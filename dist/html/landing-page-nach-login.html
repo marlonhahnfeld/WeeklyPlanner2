@@ -316,26 +316,17 @@
                 </div>
             </div>
         </div>
-        <!-- TODO: Eine fixe Größe der Notizen festlegen, falls Anzahl der Notizen übersteigt -> über mehrere Seiten verteilen -->
         <div id="User-Notefield-Container"
             class="border w-[700px] h-[670px] flex flex-col justify-between items-center">
-            <div class="w-[95%]">
-                <h5 class="text-h5 p-[13px]">Deine Notizen</h5>
-                <div id="Notes-Container" class="flex flex-wrap border gap-[30px]">
-                    <button class="Note-Button">1</button>
-                    <button class="Note-Button">2</button>
-                    <button class="Note-Button">3</button>
-                    <button class="Note-Button">3</button>
-                    <button class="Note-Button">3</button>
-                    <button class="Note-Button">3</button>
-                    <button class="Note-Button">3</button>
-                    <button class="Note-Button">3</button>
-                    <button class="Note-Button">3</button>
-                    <button class="Note-Button">3</button>
-                    <button class="Note-Button">3</button>
+            <div id="User-Notefield-Container-Content" class="w-[95%] mt-5">
+                <h4 class="mb-2 text-center text-h4">Deine Notizen</h4>
+                <div id="Notes-Container" class="h-[500px] overflow-y-auto p-2">
+                    <div id="Notes-Inner-Container" class="grid grid-cols-3 gap-4">
+                    </div>
                 </div>
             </div>
-            <button id="Add-Note-Button" class="px-[25px] py-5 mb-10 rounded-[100%] bg-slate-400"
+            <button id="Add-Note-Button"
+                class="px-[25px] py-5 mb-5 rounded-[100%] w-fit bg-slate-400 hover:bg-slate-300"
                 onclick="showPopUp()">+</button>
         </div>
         <div id="Quick-Menu-Button-Container" class="flex flex-col justify-between mt-2 text-3xl">
@@ -371,12 +362,12 @@
             <h4 class="mt-2 text-center underline text-h4">Neue Notiz</h4>
             <div class="mt-2 mb-2">
                 <h6 class="text-h6">Titel</h6>
-                <input id="Input-Title" maxlength="20" class="w-64 p-1 mb-5 text-black rounded-md" type="text"
+                <input id="Input-Note-Title" maxlength="20" class="w-64 p-1 mb-5 text-black rounded-md" type="text"
                     placeholder="Titel der Notiz">
                 <h6 class="text-h6">Beschreibung</h6>
                 <!--<input id="Input-Desc" class="w-64 h-20 mb-5 text-justify text-black break-words rounded-md" type="text"
                     placeholder="Beschreibung"> -->
-                <textarea id="Note-Desc" maxlength="210" placeholder="Beschreibung der Notiz"
+                <textarea id="Input-Note-Desc" maxlength="210" placeholder="Beschreibung der Notiz"
                     class="w-64 p-1 text-black rounded-md resize-none h-[200px]"></textarea>
             </div>
             <button id="Add-Note-Button" class="self-center p-2 mb-5 rounded-lg bg-slate-700 hover:bg-slate-400 w-fit"
