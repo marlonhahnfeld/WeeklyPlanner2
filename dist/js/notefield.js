@@ -44,6 +44,10 @@ function createNote() {
   let desc = inputNoteDesc.value;
   console.log(title + "\n" + desc);
 
+  if (title == "") {
+    return;
+  }
+
   let newNoteButton = document.createElement("btn");
   newNoteButton.classList.add("Note-Button");
 
