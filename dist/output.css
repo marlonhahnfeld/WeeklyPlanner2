@@ -653,6 +653,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-28 {
   margin-top: 7rem;
 }
@@ -669,6 +673,42 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
+.mt-52 {
+  margin-top: 13rem;
+}
+
+.mt-\[95\%\] {
+  margin-top: 95%;
+}
+
+.mt-\[80\%\] {
+  margin-top: 80%;
+}
+
+.mt-\[70\%\] {
+  margin-top: 70%;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
+}
+
+.ml-48 {
+  margin-left: 12rem;
+}
+
 .block {
   display: block;
 }
@@ -681,12 +721,12 @@ video {
   display: none;
 }
 
-.h-\[100px\] {
-  height: 100px;
+.h-8 {
+  height: 2rem;
 }
 
-.h-\[1200px\] {
-  height: 1200px;
+.h-\[100px\] {
+  height: 100px;
 }
 
 .h-\[44px\] {
@@ -695,6 +735,10 @@ video {
 
 .h-\[480px\] {
   height: 480px;
+}
+
+.h-\[600px\] {
+  height: 600px;
 }
 
 .h-full {
@@ -746,8 +790,8 @@ video {
   width: 100%;
 }
 
-.w-20 {
-  width: 5rem;
+.w-12 {
+  width: 3rem;
 }
 
 .flex-grow {
@@ -797,6 +841,10 @@ video {
 
 .justify-around {
   justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-1 {
@@ -896,11 +944,6 @@ video {
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
 }
 
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-
 .bg-slate-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(100 116 139 / var(--tw-bg-opacity));
@@ -956,6 +999,10 @@ video {
 
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .text-center {
@@ -1061,68 +1108,12 @@ video {
   text-decoration-line: underline;
 }
 
-.decoration-wavy {
-  text-decoration-style: wavy;
-}
-
 .decoration-8 {
   text-decoration-thickness: 8px;
 }
 
-.decoration-2 {
-  text-decoration-thickness: 2px;
-}
-
-.decoration-4 {
-  text-decoration-thickness: 4px;
-}
-
-.decoration-\[40px\] {
-  text-decoration-thickness: 40px;
-}
-
-.decoration-\[20px\] {
-  text-decoration-thickness: 20px;
-}
-
 .underline-offset-\[20px\] {
   text-underline-offset: 20px;
-}
-
-.underline-offset-\[22px\] {
-  text-underline-offset: 22px;
-}
-
-.underline-offset-\[24px\] {
-  text-underline-offset: 24px;
-}
-
-.underline-offset-\[25px\] {
-  text-underline-offset: 25px;
-}
-
-.underline-offset-8 {
-  text-underline-offset: 8px;
-}
-
-.underline-offset-4 {
-  text-underline-offset: 4px;
-}
-
-.underline-offset-\[10px\] {
-  text-underline-offset: 10px;
-}
-
-.underline-offset-\[16px\] {
-  text-underline-offset: 16px;
-}
-
-.underline-offset-\[18px\] {
-  text-underline-offset: 18px;
-}
-
-.underline-offset-\[21px\] {
-  text-underline-offset: 21px;
 }
 
 .shadow-lg {

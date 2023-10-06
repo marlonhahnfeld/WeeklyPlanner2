@@ -11,6 +11,7 @@ import {
   getFirestore,
   doc,
   setDoc,
+  getDoc,
 } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -43,4 +44,5 @@ export {
   doc,
   setDoc,
   signOut,
+  getDoc,
 };

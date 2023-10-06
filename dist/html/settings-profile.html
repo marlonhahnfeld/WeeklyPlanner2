@@ -28,10 +28,29 @@
         >Settings</a
       ></div>
     </div>
-    <div id="parentMainContainer" class="justify-center flex">
+    <div id="parentMainContainer" class="justify-evenly flex">
     <div id="mainContent"
-    class="w-[800px] bg-slate-300 h-[1200px]" >
+    class="w-[800px] bg-slate-700 h-[600px] flex justify-around mt-8" >
+
+    <label for="inputSettingsVorname" class="block mb-1 text-base text-white mt-30 mt-10"
+    >Vorname</label
+  >
+  <input
+    type="text"
+    autocomplete="off"
+    class="px-1 mb-2 text-white rounded-md bg-slate-700 h-8 mt-10"
+    placeholder="Vorname"
+    id="inputSettingsVorname"
+  />
+  <input
+            type="submit"
+            value="Save"
+            class="bg-RedCustom rounded-md text-xl  text-white hover:bg-red-950 h-8 w-12 mt-[70%] ml-48"
+            id="btnSave"
+          />
     </div>
+    
 </div>
+<script src="../js/settings-profile.js" type="module"></script>
   </body>
 </html>
