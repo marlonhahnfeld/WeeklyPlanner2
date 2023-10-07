@@ -11,6 +11,8 @@ const user = await auth.currentUser;
 const btnLoad = document.getElementById("btnLoad");
 const btnSave = document.getElementById("btnSave");
 const inputVorname = document.getElementById("inputSettingsVorname");
+const inputNachname = document.getElementById("inputSettingsNachname");
+const inputDate = document.getElementById("inputSettingsDate");
 
 btnLoad.addEventListener("click", getData);
 //  document.addEventListener("DOMContentLoaded", testGetDb);
@@ -21,9 +23,13 @@ async function getData() {
   if (docSnap.exists()) {
     // Warten, bis der Benutzer aus der Datenbank gezogen wurde
     const vorname = await docSnap.data().vorname;
+    const nachname = await docSnap.data().nachname
+    const date = await docSnap.data().geburtstag
 
     // Setzen des Werts des Eingabefelds
     inputVorname.value = vorname;
+    inputNachname.value = nachname;
+    inputDate.value = date;
   } else {
     // docSnap.data() will be undefined in this case
     console.log("No such document!");

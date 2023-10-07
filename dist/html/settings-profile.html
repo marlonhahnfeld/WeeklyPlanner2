@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
     <title>Settings</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body class="bg-slate-800">
     <div  id="parentTopContainer" class="justify-center flex">
@@ -12,7 +19,7 @@
       role="tablist"
       id="topContainer"
       class =" border-b-slate-700 border-b-2 border- flex justify-around text-gray-400 text-base
-      font-semibold w-[1200px] h-[44px] mt-16"
+      font-semibold w-[1000px] h-[44px] mt-16"
     >
       <a
         class="hover:text-white underline underline-offset-[20px] decoration-8 "
@@ -28,34 +35,24 @@
         >Settings</a
       ></div>
     </div>
-    <div id="parentMainContainer" class="justify-evenly flex">
-    <div id="mainContent"
-    class="w-[800px] bg-slate-700 h-[600px] flex justify-around mt-8" >
-    <input
-    type="submit"
-    value="Load"
-    class="bg-RedCustom rounded-md text-xl  text-white hover:bg-red-950 h-8 w-12 mt-[70%]"
-    id="btnLoad"
-  />
-    <label for="inputSettingsVorname" class="block mb-1 text-base text-white mt-30 mt-10"
-    >Vorname</label
-  >
-  <input
-    type="text"
-    autocomplete="off"
-    class="px-1 mb-2 text-white rounded-md bg-slate-700 h-8 mt-10"
-    placeholder="Vorname"
-    id="inputSettingsVorname"
-  />
-          <input
-            type="submit"
-            value="Save"
-            class="bg-RedCustom rounded-md text-xl  text-white hover:bg-red-950 h-8 w-12 mt-[70%] ml-48"
-            id="btnSave"
-          />
-    </div>
-    
-</div>
+    <a href="./landing-page-nach-login.html">
+    <i class="fa-solid fa-arrow-left text-white ml-[25%] mt-4 scale-150"></i>
+    </a>
+    <div class="flex justify-center">
+    <div id="parentMainContainer" class="justify-evenly flex bg-slate-900 w-[50%] rounded-2xl mt-4">
+      <div class="block">
+      <div id="mainContent" class="flex flex-col justify-between px-12">
+        <label for="inputSettingsVorname" class="block mb-1 text-base text-white mt-10">Vorname</label>
+        <input type="text" autocomplete="off" class="px-1 mb-4 text-white rounded-md bg-slate-700 h-8 mt-4" placeholder="Vorname" id="inputSettingsVorname" />
+        <label for="inputSettingsNachname" class="block mb-1 text-base text-white mt-10">Nachname</label>
+        <input type="text" autocomplete="off" class="px-1 mb-4 text-white rounded-md bg-slate-700 h-8 mt-4" placeholder="Nachname" id="inputSettingsNachname" />
+        <label for="inputSettingsDate" class="block mb-1 text-base text-white mt-10">Date</label>
+        <input type="text" autocomplete="off" class="px-1 mb-10 text-white rounded-md bg-slate-700 h-8 mt-4" placeholder="Date" id="inputSettingsDate" />
+      </div>
+      <div class="flex justify-between">
+      <input type="submit" value="Load" class="bg-red-custom rounded-md text-xl text-white hover:bg-blue-950 h-8 w-12 mb-4 bg-blue-400" id="btnLoad" />
+        <input type="submit" value="Save" class="bg-red-custom rounded-md text-xl text-white hover:bg-red-950 h-8 w-12 mb-4  bg-RedCustom" id="btnSave" />
+</div></div></div></div>
 <script src="../js/settings-profile.js" type="module"></script>
   </body>
 </html>
