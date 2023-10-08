@@ -13,9 +13,36 @@ const btnSave = document.getElementById("btnSave");
 const inputVorname = document.getElementById("inputSettingsVorname");
 const inputNachname = document.getElementById("inputSettingsNachname");
 const inputDate = document.getElementById("inputSettingsDate");
+const inputProfilbildText = document.getElementById("inputSettingsProfilbild");
 
 btnLoad.addEventListener("click", getData);
 //  document.addEventListener("DOMContentLoaded", testGetDb);
+inputProfilbildText.addEventListener("click", openpopupSetProfilepicture);
+
+/**
+ * * opens the appointment add popup
+ */
+function openpopupSetProfilepicture() {
+  const maincontent = document.getElementById("Main-Content-Container");
+  const popup = document.getElementById("popup");
+  popup.classList.toggle("hidden");
+  maincontent.classList.toggle("blur");
+
+  // Animate the popup
+  popup.classList.add("fadeIn");
+  popup.classList.add("scaleIn");
+}
+
+/**
+ * * Schließt das Termin hinzufügen popup
+ *
+ */
+function closepopupSetProfilepicture() {
+  const popup = document.getElementById("popup");
+  const maincontent = document.getElementById("Main-Content-Container");
+  popup.classList.toggle("hidden");
+  maincontent.classList.toggle("blur");
+}
 
 async function getData() {
   const docRefUid = doc(db, "users", auth.currentUser.uid);

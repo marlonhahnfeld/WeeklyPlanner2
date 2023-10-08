@@ -39,9 +39,18 @@
     <i class="fa-solid fa-arrow-left text-white ml-[25%] mt-4 scale-150"></i>
     </a>
     <div class="flex justify-center">
-    <div id="parentMainContainer" class="justify-evenly flex bg-slate-900 w-[50%] rounded-2xl mt-4">
+    <div id="parentMainContainer" class="justify-evenly flex bg-slate-900 w-[50%] h-[700px] rounded-2xl mt-4">
       <div class="block">
       <div id="mainContent" class="flex flex-col justify-between px-12">
+        <div class="justify-center flex">
+        <!-- TODO PIC ONCLICK POP UP BIGGER -->
+        <img class="w-[20%] h-[30%] rounded-full mt-10" src="/res/img/Logo.png" alt="Profile Picture" />
+       </div>
+       <div class="justify-center flex">
+       <a class=" text-white hover:text-blue-400" id="inputSettingsProfilbild">
+        change your profile picture?
+       </a>
+      </div>
         <label for="inputSettingsVorname" class="block mb-1 text-base text-white mt-10">Vorname</label>
         <input type="text" autocomplete="off" class="px-1 mb-4 text-white rounded-md bg-slate-700 h-8 mt-4" placeholder="Vorname" id="inputSettingsVorname" />
         <label for="inputSettingsNachname" class="block mb-1 text-base text-white mt-10">Nachname</label>
@@ -52,7 +61,34 @@
       <div class="flex justify-between">
       <input type="submit" value="Load" class="bg-red-custom rounded-md text-xl text-white hover:bg-blue-950 h-8 w-12 mb-4 bg-blue-400" id="btnLoad" />
         <input type="submit" value="Save" class="bg-red-custom rounded-md text-xl text-white hover:bg-red-950 h-8 w-12 mb-4  bg-RedCustom" id="btnSave" />
-</div></div></div></div>
+</div>
+</div>
+</div>
+
+<div id="popup" class="hidden z-10 absolute top-[20%] left-[39%]">
+  <div class="flex items-center justify-center">
+    <div
+      class="p-6 rounded-md w-96 bg-slate-700 shadow-lg shadow-PrioCustom"
+      id="innerbody"
+    >
+      <i
+        class="bx bx-chevron-down justify-end text-white text-3xl"
+        id="closeAdd"
+      ></i>
+      <label for="inputTitle" class="block mb-1 text-base text-white mt-30"
+        >Upload picture from local files</label
+      >
+      <div class="flex justify-end">
+        <input
+          type="submit"
+          value="Save"
+          class="bg-RedCustom rounded-md text-xl ml-10 text-white hover:bg-red-950 px-2 py-1.5"
+          id="btnAppointmentAdd"
+        />
+      </div>
+    </div>
+  </div>
+</div></div>
 <script src="../js/settings-profile.js" type="module"></script>
   </body>
 </html>
