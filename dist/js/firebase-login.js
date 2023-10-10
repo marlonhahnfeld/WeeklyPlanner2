@@ -12,7 +12,7 @@ function signInUser() {
       const user = userCredential.user;
 
       // Ersetzen der aktuellen URL durch "/neue-seite.html"
-      location.assign("landing-page-nach-login.html");
+      location.assign("landing-page.html");
 
       // ...
     })

@@ -21,12 +21,12 @@ import {
   
     // Create a list element to store the appointments
     const list = document.createElement("ul");
-    list.style.paddingLeft = "25px";
-    list.style.color = "white";
+    //list.style.paddingLeft = "25px";
+    //list.style.color = "white";
   
     // Iterate over the query snapshot and add each appointment to the list
     querySnapshot.forEach((doc) => {
-      createCard(doc.data().appointmentTitle, doc.data().appointmentDate, doc.data().appointmentPriority)
+      createButton(doc.data().appointmentTitle, doc.data().appointmentDate, doc.data().appointmentPriority)
     });
   
     // Append the list to the main content element
@@ -68,4 +68,45 @@ import {
             case "hoch" : card.style.backgroundColor = "red";
             break;
         }
+  }
+
+  function createButton(appointmentTitle, appointmentDate, appointmentPriority) {
+    const button = document.createElement("button");
+    button.classList.add("Appointment-Button");
+    button.style.backgroundColor = "red";
+    button.style.color = "white";
+    button.style.marginLeft = "3rem";
+  
+    const textContainer = document.createElement("div");
+    textContainer.style.display = "flex";
+    textContainer.style.flexDirection = "column";
+    textContainer.style.justifyContent = "space-between";
+    textContainer.style.width = "100%";
+    textContainer.style.height = "100%";
+    textContainer.style.overflow = "hidden";
+  
+    const headerContainer = document.createElement("div");
+    headerContainer.style.display = "flex";
+    headerContainer.style.justifyContent = "space-between";
+    headerContainer.style.marginLeft = "0rem";
+    headerContainer.style.marginTop = "0rem";
+  
+    const headerText = document.createElement("p");
+    headerText.textContent = appointmentTitle;
+    headerContainer.appendChild(headerText);
+  
+    const headerTime = document.createElement("p");
+    headerTime.textContent = appointmentDate;
+    headerContainer.appendChild(headerTime);
+  
+    const priorityContainer = document.createElement("p");
+    priorityContainer.textContent = appointmentPriority;
+    headerContainer.appendChild(priorityContainer);
+  
+    textContainer.appendChild(headerContainer);
+    button.appendChild(textContainer);
+  
+    styleCardByPrio(appointmentPriority, button);
+    mainContent.appendChild(button);
+    return button;
   }

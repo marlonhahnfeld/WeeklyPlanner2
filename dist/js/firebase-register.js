@@ -43,7 +43,7 @@ function signUpUser() {
       async (userCredential) => {
         const user = userCredential.user;
         await InsertUserToDB(user.uid);
-        location.assign("../html/landing-page-nach-login.html");
+        location.assign("../html/landing-page.html");
       }
     );
   }
